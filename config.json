@@ -1,0 +1,23 @@
+{
+  "title": "Aubrey Portwood",
+  "subtitle": "Stoic | Developer",
+  "meta": {
+    "keywords": "aubrey,portwood,aubreypwd,wordpress,stoic,stoicism,developer",
+    "robots": "noodp",
+    "twitter": {
+      "card": "summary",
+      "title": "",
+      "description": ""
+    },
+    "og": {
+      "title": "",
+      "description": "",
+      "type": "website",
+      "url": "https://aubreypwd.com/"
+    }
+  },
+  "favicon": "/favicon.ico",
+  "defaultTheme": "dark-theme",
+  "siteTitle": "~/aubreypwd",
+  "gravatar": "https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/?s=100"
+}
