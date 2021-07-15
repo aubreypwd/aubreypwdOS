@@ -9,12 +9,8 @@ export default function Content( { slug } ) {
 	}
 
 	if ( noSlug() ) {
-		return (
-			<Archive />
-		);
+		return <Archive />;
 	}
 
-	return (
-		<Page slug={slug} />
-	);
+	return <Page slug={slug} />;
 }
