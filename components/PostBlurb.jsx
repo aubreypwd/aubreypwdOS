@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
-
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
-
 import matter from 'gray-matter';
-
 import MarkdownIt from 'markdown-it';
+import striptags from 'striptags';
 
 export default function PostBlurb( { slug } ) {
-
 	const [state, setState] = useState(0);
 
 	useEffect( () => {
@@ -18,6 +15,10 @@ export default function PostBlurb( { slug } ) {
 				const m = matter( text );
 
 				setState( {
+					excerpt: striptags( 
+						new MarkdownIt().render( m?.content )
+					)
+						.substr( 0, 250 ),
 					content: ReactHtmlParser( new MarkdownIt().render( m?.content ) ),
 					title:   m.data?.title,
 					date:    m.data?.date.toString(),
@@ -33,7 +34,7 @@ export default function PostBlurb( { slug } ) {
 				<span className="post-date">{state?.date}</span>
 			</div>
 
-			<div className="post-content">{state?.content}</div>
+			<div className="post-content">{state.excerpt}</div>
 			
 			<div><a className="read-more button" href={slug}>Read more →</a></div>
 		</div>
