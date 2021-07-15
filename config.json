@@ -1,4 +1,5 @@
 {
+  "author": "Aubrey Portwood",
   "title": "Aubrey Portwood",
   "subtitle": "Stoic | Developer",
   "meta": {
@@ -10,8 +11,8 @@
       "description": ""
     },
     "og": {
-      "title": "",
-      "description": "",
+      "title": "Aubrey Portwood",
+      "description": "Stoic | Developer",
       "type": "website",
       "url": "https://aubreypwd.com/"
     }
@@ -19,5 +20,6 @@
   "favicon": "/favicon.ico",
   "defaultTheme": "dark-theme",
   "siteTitle": "~/aubreypwd",
-  "gravatar": "https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/?s=100"
+  "gravatar": "https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/?s=100",
+  "lead": "Hi 👋 I am a Senior WordPress Developer [@WebDevStudios](https://webdevstudios.com) and a modern-day Stoic on the hunt for the _good life_. If you want to learn more about me, checkout the links in the menu or any of the blogs below."
 }

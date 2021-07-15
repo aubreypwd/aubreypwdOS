@@ -1,6 +1,6 @@
 import config from '../config.json';
 
-export default function Logo() {
+export default function MainNav() {
 	return (
 		<nav className="menu">
 			<ul className="menu__inner menu__inner--desktop">

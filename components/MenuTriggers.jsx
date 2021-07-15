@@ -1,6 +1,6 @@
 import config from '../config.json';
 
-export default function Logo() {
+export default function MenuTriggers() {
 	return (
 		<>
 			<span className="menu-trigger">
