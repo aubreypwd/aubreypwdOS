@@ -3,12 +3,7 @@ import Posts   from '../components/Posts.jsx';
 import Post    from '../components/Post.jsx';
 
 export default function Content( { slug } ) {
-
-	function noSlug() {
-		return '' === slug || 'undefined' === typeof slug;
-	}
-
-	if ( noSlug() ) {
+	if ( '' === slug || 'undefined' === typeof slug ) {
 		return <Posts />;
 	}
 
