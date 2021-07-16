@@ -1,6 +1,6 @@
 import config  from '../config.json';
-import Archive from '../components/Archive.jsx';
-import Page    from '../components/Page.jsx';
+import Posts   from '../components/Posts.jsx';
+import Post    from '../components/Post.jsx';
 
 export default function Content( { slug } ) {
 
@@ -9,8 +9,8 @@ export default function Content( { slug } ) {
 	}
 
 	if ( noSlug() ) {
-		return <Archive />;
+		return <Posts />;
 	}
 
-	return <Page slug={slug} />;
+	return <Post slug={slug} />;
 }
