@@ -13,6 +13,7 @@
     "gray-matter": "~4.0.3",
     "jquery": "~3.6.0",
     "markdown-it": "~12.1.0",
+    "moment": "~2.29.1",
     "next": "11.0.1",
     "object-flip": "~0.1.0",
     "react": "17.0.2",

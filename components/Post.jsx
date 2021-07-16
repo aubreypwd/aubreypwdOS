@@ -6,6 +6,7 @@ import striptags from 'striptags';
 import config from '../config.json';
 import sortobject from 'deep-sort-object';
 import objectFlip from 'object-flip';
+import FormattedDate from '../components/FormattedDate.jsx';
 
 export default function Post( { slug, date, excerpt = false } ) {
 	const [state, setState] = useState( 0 );
@@ -38,7 +39,9 @@ export default function Post( { slug, date, excerpt = false } ) {
 			<h1 className="post-title"><a href={slug}>{state.title}</a></h1>
 			
 			<div className="post-meta">
-				<span className="post-date">{state?.date}</span>
+				<span className="post-date">
+					<FormattedDate date={state?.date} />
+				</span>
 			</div>
 
 			<div className="post-content">
