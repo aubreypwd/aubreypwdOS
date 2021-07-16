@@ -37,5 +37,6 @@
   "siteTitle": "~/aubreypwd",
   "gravatar": "https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/?s=100",
   "lead": "Hi 👋 I am a Senior WordPress Developer [@WebDevStudios](https://webdevstudios.com) and a modern-day Stoic on the hunt for the _good life_. If you want to learn more about me, checkout the links in the menu or any of the blogs below.",
-  "excerptLength": 250
+  "excerptLength": 250,
+  "postsPerPage": 5
 }
