@@ -1,19 +1,19 @@
 {
 	"philosophy": {
-		"09-26-2020": "stoic-five-minute-journal",
-		"10-10-2020": "better-words-for-stoic-virtues",
-		"10-20-2020": "stoic-week-2020-tuesday",
-		"10-21-2020": "stoic-week-2020-wednesday",
-		"10-22-2020": "stoic-week-2020-thursday",
-		"10-23-2020": "stoic-week-2020-friday",
-		"10-24-2020": "stoic-week-2020-saturday",
-		"10-26-2020": "stoic-week-2020-sunday-makeup"
+		"2020-09-26": "stoic-five-minute-journal",
+		"2020-07-03": "better-words-for-stoic-virtues",
+		"2020-10-20": "stoic-week-2020-tuesday",
+		"2020-10-21": "stoic-week-2020-wednesday",
+		"2020-10-22": "stoic-week-2020-thursday",
+		"2020-10-23": "stoic-week-2020-friday",
+		"2020-10-24": "stoic-week-2020-saturday",
+		"2020-10-26": "stoic-week-2020-sunday-makeup"
 	},
 	"coding": {
-		"08-08-2020": "hello-world",
-		"09-18-2020": "de-centralize-configs-gitconfig-gitignore",
-		"10-10-2020": "apple-watch-se-watch-os-7-review",
-		"10-30-2020": "sublime-file-hangs-on-save",
-		"06-25-2021": "hello-world-1-1"
+		"2021-06-25": "hello-world-1-1",
+		"2020-08-08": "hello-world",
+		"2020-09-18": "de-centralize-configs-gitconfig-gitignore",
+		"2020-10-10": "apple-watch-se-watch-os-7-review",
+		"2020-10-30": "sublime-file-hangs-on-save"
 	}
 }

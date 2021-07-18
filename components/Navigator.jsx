@@ -126,7 +126,7 @@ export default function Navigator( { slug } ) {
 
 				small {
 					font-weight: normal;
-					opacity: 40%;
+					color: $grey;
 					padding-left: 10px;
 				}
 			}

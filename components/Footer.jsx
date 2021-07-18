@@ -39,7 +39,7 @@ export default function Posts() {
 
 					&:last-child {
 						text-align: right;
-						opacity: 50%;
+						color: $grey;
 					}
 				}
 			}
