@@ -1,36 +1,25 @@
-export default function Posts() {
-	return <>
-		<h1>Posts</h1>
+import sortobject from 'deep-sort-object';
+import objectFlip from 'object-flip';
 
+import PostLink from '../components/PostLink.jsx';
+
+export default function Posts( { slug } ) {
+	if ( ! slug || 'help' === slug ) {
+		return <></>
+	}
+
+	const posts = sortobject( {
+		'philosophy': {
+			'10-25-1983': 'test',
+			'10-26-1983': 'test2',
+		},
+	} );
+
+	return <>
 		<ul className="posts">
-			<li>
-				<div><a href="something">Post about this</a></div>
-				<small className="meta">Saturday, 7/17/2021</small>
-			</li>
-			<li>
-				<div><a href="something">Post about something else</a></div>
-				<small className="meta">Saturday, 7/17/2021</small>
-			</li>
-			<li>
-				<div><a href="something">Post about something else</a></div>
-				<small className="meta">Saturday, 7/17/2021</small>
-			</li>
-			<li>
-				<div><a href="something">Post about this</a></div>
-				<small className="meta">Saturday, 7/17/2021</small>
-			</li>
-			<li>
-				<div><a href="something">Post about something else</a></div>
-				<small className="meta">Saturday, 7/17/2021</small>
-			</li>
-			<li>
-				<div><a href="something">Post about something else</a></div>
-				<small className="meta">Saturday, 7/17/2021</small>
-			</li>
-			<li>
-				<div><a href="something">Post about this</a></div>
-				<small className="meta">Saturday, 7/17/2021</small>
-			</li>
+			{Object.keys( posts[slug] ).map( date =>
+				<li key={`/${posts[slug][date]}`}><PostLink slug={`/${posts[slug][date]}`} /></li>
+			)}
 		</ul>
 
 		<style jsx>{`
