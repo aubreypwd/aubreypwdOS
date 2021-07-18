@@ -4,7 +4,7 @@ export default function Posts() {
 	return <>
 		<footer>
 			<p>
-				Copyright &copy; {site.author}<br/>
+				copyright &copy; {site.author}<br/>
 			</p>
 
 			<p>
@@ -32,6 +32,7 @@ export default function Posts() {
 				}
 
 				p {
+					color: $grey;
 					display: flex;
 					flex-direction: column;
 					flex-basis: 100%;
@@ -39,7 +40,6 @@ export default function Posts() {
 
 					&:last-child {
 						text-align: right;
-						color: $grey;
 					}
 				}
 			}

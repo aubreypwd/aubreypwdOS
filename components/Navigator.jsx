@@ -2,20 +2,21 @@ import {site} from '../next.config.js';
 import SocialLinks from './SocialLinks.jsx';
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import posts from '../posts.json';
 
 export default function Navigator( { slug } ) {
 
 	const router = useRouter();
 
 	const valids = [
-		'coding',
-		'philosophy',
+		...Object.keys( posts ),
 		'help',
 		'?',
 	];
 
 	useEffect( () => {
 		document.getElementById( 'input' ).focus();
+		document.getElementById( 'input' ).select();
 	} );
 
 	function click( event ) {
@@ -69,65 +70,49 @@ export default function Navigator( { slug } ) {
 	}
 
 	return <>
-		<h1>
-			<a href="/">
-				{site.title}/<input
-					type="text"
-					id="input"
-					onClick={click}
-					onKeyUp={up}
-					autoComplete="off"
-					onFocus={focus}
-					maxLength="19"
-					defaultValue={slug} />
-			</a>
-
-			<small>
-				<em>Then hit <strong>enter</strong> or type <strong>help</strong> for help.</em>
-			</small>
-		</h1>
+		<div>
+			<input
+				type="text"
+				id="input"
+				onClick={click}
+				onKeyUp={up}
+				autoComplete="off"
+				onFocus={focus}
+				maxLength="19"
+				defaultValue={slug || ''} />
+		</div>
 
 		<style jsx>{`
 			@import '../styles/variables.scss';
 
-			h1 {
+			input,
+			input:active,
+			input:focus,
+			input:focus-within {
+				border: 0;
+				border-bottom: 1px solid $grey;
+				display: inline;
+				font-family: inherit;
+				font-size: inherit;
+				padding: 0;
+				width: auto;
+				outline: none;
+				font-weight: bold;
+				caret-color: black;
+				width: 100%;
+				dispaly: block;
 
-				margin: 0;
-				font-size: 1rem;
-
-				a {
-					color: $black;
-					text-decoration: none;
-
-					input,
-					input:active,
-					input:focus,
-					input:focus-within {
-						border: 0;
-						border-bottom: 1px solid $grey;
-						display: inline;
-						font-family: inherit;
-						font-size: inherit;
-						padding: 0;
-						width: auto;
-						outline: none;
-						font-weight: bold;
-						caret-color: black;
-
-						&.valid {
-							// color: $lightGreen;
-						}
-
-						&.invalid {
-							color: $lightRed;
-						}
-					}
+				&::selection{
+					background: $black;
+					color: $white;
 				}
 
-				small {
-					font-weight: normal;
-					color: $grey;
-					padding-left: 10px;
+				&:focus.valid {
+					// Nothing;
+				}
+
+				&.invalid {
+					color: $lightRed;
 				}
 			}
 		`}</style>

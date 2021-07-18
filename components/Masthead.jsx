@@ -8,7 +8,6 @@ export default function MastHead( { slug } ) {
 	return <>
 		<header>
 			<SocialLinks />
-			<Navigator slug={slug} />
 			<Lead slug={slug} />
 		</header>
 

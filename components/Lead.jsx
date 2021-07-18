@@ -5,20 +5,33 @@ import Navigator from './Navigator.jsx';
 import Help from './Help.jsx';
 
 export default function Lead( { slug } ) {
-	if ( 'help' === slug ) {
-		return <Help />
-	}
-
 	return <>
-		<h2
-			className={slug}
-			dangerouslySetInnerHTML={{ __html: `It's time to love<br> <em>something</em> again.`.replace( 'something', slug || 'something' ) }}>
+		<h2 className={slug}>
+			It&apos;s time to love <Navigator slug={slug} /> again.
 		</h2>
 
+		<small>
+			<em>type <strong>help</strong> for help.</em>
+		</small>
+
+		{'help' === slug &&
+			<Help />
+		}
+
 		<style jsx>{`
+			@import '../styles/variables.scss';
+
 			h2 {
 				font-size: 4rem;
 				margin: 0;
+			}
+
+			small {
+				font-weight: normal;
+				color: $grey;
+				padding-left: 10px;
+				font-size: 1rem;
+				line-height: 2rem;
 			}
 		`}</style>
 	</>

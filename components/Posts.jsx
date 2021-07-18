@@ -40,8 +40,8 @@ export default function Posts( { slug } ) {
 		<style jsx>{`
 			ul {
 				list-style: none;
-				padding-left: 20px;
-				padding-right: 20px;
+				padding-left: 0;
+				padding-right: 0;
 
 				li {
 					padding: 3px 0;

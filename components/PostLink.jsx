@@ -19,7 +19,7 @@ export default function PostLink( { slug, navigator } ) {
 
 	useEffect( () => {
 		if ( state.title ) {
-			return;
+			return; // Only fetch state once.
 		}
 
 		fetch( `../content/md/posts/${slug}.md` )
@@ -28,8 +28,6 @@ export default function PostLink( { slug, navigator } ) {
 				const m    = matter( text );
 				const md   = markDownIt.render( m?.content );
 				const html = ReactHtmlParser( md );
-
-				// console.log( slug, m.data.date.toString(), m.data.date );
 
 				setState( {
 					title:   m.data?.title,
@@ -42,7 +40,7 @@ export default function PostLink( { slug, navigator } ) {
 
 	return <>
 		<a href={slug}>
-			<span>{state.title || 'Unknown'}</span>
+			<strong>{state.title || 'Unknown'}</strong>
 			<small>{state.date}</small>
 		</a>
 
@@ -57,7 +55,7 @@ export default function PostLink( { slug, navigator } ) {
 				&:hover {
 				}
 
-				span,
+				strong,
 				small {
 					display: flex;
 					flex-direction: column;
@@ -67,6 +65,8 @@ export default function PostLink( { slug, navigator } ) {
 
 				small {
 					padding-left: 5px;
+					font-style: italic;
+					text-align: right;
 				}
 
 			}

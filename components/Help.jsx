@@ -3,7 +3,7 @@ import {site} from '../next.config.js';
 export default function Help( { slug } ) {
 	return <>
 		<p>
-			Try <strong>coding</strong>, <strong>philosophy</strong>, or <strong>help</strong>.
+			Try <strong>coding</strong> or <strong>philosophy</strong>.
 		</p>
 	</>
 };
