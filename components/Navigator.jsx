@@ -58,10 +58,11 @@ export default function Navigator( { slug } ) {
 
 		if ( isHelp( event.target.value ) ) {
 			router.push( '/help' );
+			return;
 		}
 
 		if ( ! valids.includes( event.target.value ) ) {
-			return;
+			return; // Nothing valid, do nothing.
 		}
 
 		router.push( event.target.value );
@@ -78,7 +79,7 @@ export default function Navigator( { slug } ) {
 					autoComplete="off"
 					onFocus={focus}
 					maxLength="19"
-					defaultValue={'help' === slug ? '' : slug} />
+					defaultValue={slug} />
 			</a>
 
 			<small>
