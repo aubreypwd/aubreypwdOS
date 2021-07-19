@@ -74,7 +74,9 @@ $red: #bf5757;
 
 						background-color: $bg;
 						border-bottom: 1px solid $mid;
-						border: 0;
+						border-top: 0;
+						border-right: 0;
+						border-left: 0;
 						color: $fg;
 						caret-color: $fg;
 						dispaly: block;
