@@ -6,7 +6,7 @@ tags:
     - stoicism
 ---
 
-![Stoic Week Image](/images/1669160376/stoic-week.png)
+![Stoic Week Image](/assets/images/1669160376/stoic-week.png)
 
 - [Morning](#morning)
 - [Afternoon](#afternoon)

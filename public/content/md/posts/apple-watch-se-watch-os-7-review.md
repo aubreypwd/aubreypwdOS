@@ -12,9 +12,9 @@ _Note that I do not sync things to my watch, as I prefer to play most things dir
 
 ### Audiobooks & Podcasts Show Wrong Episode
 
-![](/images/2308529140/IMG_0905.JPG)
+![](/assets/images/2308529140/IMG_0905.JPG)
 
-![](/images/2308529140/IMG_0906.PNG)
+![](/assets/images/2308529140/IMG_0906.PNG)
 
 As you can see I'm listening to [The Daily Stoic](https://dailystoic.com/podcast/), but it's showing [Stoicism on Fire](https://podcasts.apple.com/us/podcast/stoicism-on-fire/id1368482721)!
 
@@ -26,7 +26,7 @@ _This same experience on Audiobooks!_
 
 So one of my favorite genres of music (when I'm in my car) is Country (from my library), and on my phone I can just select the Country genre and shuffle, but I can't do this on my watch.
 
-![](/images/2308529140/IMG_0909.jpg)
+![](/assets/images/2308529140/IMG_0909.jpg)
 
 It shows Playlists, Artists, Albums and Songs, no Genre. Not a deal-breaker but I usually listen to my music using Genres when I'm on my iPhone or Mac.
 
@@ -62,7 +62,7 @@ I currently have 8 complication setup:
 
 Note, I just tried to take a screenshot of my face using the double button thing....it restarted my watch 😒, so here's a photo of my hairy arms:
 
-![](/images/2308529140/IMG_0912.jpg)
+![](/assets/images/2308529140/IMG_0912.jpg)
 
 Having my next meeting on my watch has reduced the need for [Next Meeting](https://apps.apple.com/us/app/next-meeting/id1017470484?mt=12) on my Mac. Also seeing how many todo's I have today is great! The weather is nice to because I have a rule: if it's below 70, I wear pants lol. So, making this decision everyday is even quicker! Also being able to start voice memos and control my music (usually in my car) is super nice (for the most part).
 

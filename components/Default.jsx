@@ -6,11 +6,11 @@ import Footer from '../components/Footer.jsx';
 import Post from '../components/Post.jsx';
 import posts from '../posts.json';
 import {getFlatPosts} from '../functions.jsx';
+import React, { useEffect } from 'react';
 
 export default function Default( { slug } ) {
 
-
-	function content( slug ) {
+	function contentFor( slug ) {
 		let flatPosts = getFlatPosts( posts );
 
 		if ( flatPosts.includes( slug ) ) {
@@ -32,7 +32,7 @@ export default function Default( { slug } ) {
 
 			<main className="main">
 				<article>
-					{content(slug)}
+					{contentFor(slug)}
 				</article>
 			</main>
 

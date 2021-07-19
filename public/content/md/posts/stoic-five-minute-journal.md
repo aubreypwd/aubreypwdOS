@@ -6,7 +6,7 @@ tags:
     - stoicism
 ---
 
-![A photo of my journal on my desk.](/images/IMG_0840.jpg)
+![A photo of my journal on my desk.](/assets/images/IMG_0840.jpg)
 
 So the last month or so I've been journaling a little bit different. A while go, I ran across a [video](https://www.youtube.com/watch?v=UFdR8w_R1HA) that went over the idea of the _Five Minute Journal_, and I was intrigued.
 

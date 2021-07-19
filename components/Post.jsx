@@ -16,6 +16,9 @@ import { fetchPostTextThen } from '../functions.jsx';
 
 import FadeIn from 'react-fade-in';
 
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-tomorrow.css';
+
 export default function Post( { slug, navigator } ) {
 	const [ state, setState ] = useState( {} );
 
@@ -25,6 +28,8 @@ export default function Post( { slug, navigator } ) {
 		if ( state.title ) {
 			return;
 		}
+
+		Prism.highlightAll();
 
 		fetchPostTextThen( slug, text => {
 			const m = matter( text );
@@ -46,7 +51,7 @@ export default function Post( { slug, navigator } ) {
 
 			<header>
 				<h1>{state.title}</h1>
-				<span><datetime>{state.date}</datetime></span>
+				<span>{state.date}</span>
 			</header>
 
 			<div>

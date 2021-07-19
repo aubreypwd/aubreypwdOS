@@ -10,7 +10,7 @@ So here it is! 🙌🏻 &mdash; It's basically the same thing but a little easie
 
 ### Here's how it looked before:
 
-![Here's how it looked before.](/images/4246942401/before.png)
+![Here's how it looked before.](/assets/images/4246942401/before.png)
 
 [Checkout the source &rarr;](https://github.com/aubreypwd/aubreypwd.github.io-hugo)
 
