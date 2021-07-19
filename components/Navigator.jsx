@@ -6,7 +6,10 @@ import { getFlatPosts, getPostCategory } from '../functions.jsx';
 import aZKeyCodes from '../a-z-keycodes.json';
 
 export default function Navigator( { slug } ) {
+
 	const router = useRouter();
+
+	slug = slug?.toLowerCase();
 
 	useEffect( () => {
 		const input = document.getElementById( 'input' );
@@ -33,6 +36,8 @@ export default function Navigator( { slug } ) {
 	}
 
 	function isHelp( value ) {
+		value = value?.toLowerCase();
+
 		return 'help' === event.target.value ||
 			'?' === event.target.value;
 	}
@@ -65,21 +70,23 @@ export default function Navigator( { slug } ) {
 			return; // Not a-z.
 		}
 
-		if ( '' === event.target.value ) {
+		const value = event.target.value.toLowerCase();
+
+		if ( '' === value ) {
 			router.push( '/' );
 			return;
 		}
 
-		if ( isHelp( event.target.value ) ) {
+		if ( isHelp( value ) ) {
 			router.push( '/help' );
 			return;
 		}
 
-		if ( ! valids.includes( event.target.value ) ) {
+		if ( ! valids.includes( value ) ) {
 			return; // Nothing valid, do nothing.
 		}
 
-		router.push( event.target.value );
+		router.push( value );
 	}
 
 	function getDefaultInputValue() {

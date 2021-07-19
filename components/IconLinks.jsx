@@ -7,7 +7,6 @@ export default function IconLinks() {
 	return <>
 		<nav className="icons">
 			<ul>
-				{/*<li><IconLink href="/" icon={faHome} /></li>*/}
 				<li><IconLink href="https://github.com/aubreypwd" icon={faGithub} newWindow={true} /></li>
 				<li><IconLink href="https://twitter.com/aubreypwd" icon={faTwitter} newWindow={true} /></li>
 			</ul>
