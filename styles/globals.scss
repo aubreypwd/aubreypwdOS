@@ -1,5 +1,6 @@
 $green: #63a263;
 $red: #bf5757;
+$mobile: 600px;
 
 @mixin body( $fg, $bg, $mid ) {
 
@@ -24,6 +25,10 @@ $red: #bf5757;
 		}
 
 		header {
+
+			@media ( max-width: $mobile ) {
+				margin-top: 20px;
+			}
 
 			margin-top: 4rem;
 
@@ -298,7 +303,7 @@ $red: #bf5757;
 			}
 		}
 
-		@media ( max-width: 600px ) {
+		@media ( max-width: $mobile ) {
 			width: 100%;
 		}
 	}
