@@ -22,9 +22,10 @@ export default function Default( { slug } ) {
 
 	return <>
 		<Head>
-			<title>{site.title} by {site.author} &mdash; {site.description}</title>
+			<title>{site.title.replace( 'something', slug ).replace( '.', '' )} by {site.author}, {site.description}</title>
 			<meta name="description" content={site.description} />
-			<link rel="icon" href="/favicon.ico" />
+
+			<link rel="icon" href="/favicon.png" />
 		</Head>
 
 		<section className="page">

@@ -27,6 +27,10 @@ $red: #bf5757;
 
 			margin-top: 4rem;
 
+			h2 {
+				font-size: 1rem;
+			}
+
 			nav {
 
 				&.icons {
@@ -57,13 +61,14 @@ $red: #bf5757;
 						margin: 0;
 					}
 
-					small {
+					div.by {
 
 						font-weight: normal;
 						color: $mid;
 						padding-left: 10px;
 						font-size: 1rem;
 						line-height: 2rem;
+						margin: 0;
 					}
 
 					// Navigator.
@@ -271,11 +276,11 @@ $red: #bf5757;
 				flex: 1;
 
 				&:first-child {
-					padding-left: 10px;
 				}
 
 				&:last-child {
 					text-align: right;
+					font-weight: bold;
 				}
 			}
 		}

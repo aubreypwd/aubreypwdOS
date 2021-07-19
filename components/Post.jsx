@@ -17,8 +17,7 @@ import { fetchPostTextThen } from '../functions.jsx';
 import FadeIn from 'react-fade-in';
 
 import Prism from 'prismjs';
-import 'prism-themes/themes/prism-material-light.css';
-
+import 'prism-themes/themes/prism-material-dark.css';
 
 export default function Post( { slug, navigator } ) {
 	const [ state, setState ] = useState( {} );

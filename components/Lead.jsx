@@ -10,14 +10,12 @@ export default function Lead( { slug } ) {
 				It&apos;s time to love <Navigator slug={slug} /> again.
 			</h2>
 
-			<small>
-				<em>type <strong>help</strong> for help.</em>
-			</small>
+			<div className="by">
+				by <strong>{site.author}</strong> <em>(type <strong>help</strong> for help)</em>
+			</div>
 		</nav>
 
-		{'help' === slug &&
-			<Help />
-		}
+		{ 'help' === slug && <Help /> }
 	</>
 };
 
