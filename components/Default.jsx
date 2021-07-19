@@ -27,7 +27,7 @@ export default function Default( { slug } ) {
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
-		<section className="container">
+		<section className="page">
 			<Masthead slug={slug} />
 
 			<main>

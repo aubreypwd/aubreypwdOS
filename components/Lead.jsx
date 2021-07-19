@@ -5,7 +5,7 @@ import Help from './Help.jsx';
 
 export default function Lead( { slug } ) {
 	return <>
-		<aside className="lead">
+		<nav className="lead">
 			<h2>
 				It&apos;s time to love <Navigator slug={slug} /> again.
 			</h2>
@@ -13,7 +13,7 @@ export default function Lead( { slug } ) {
 			<small>
 				<em>type <strong>help</strong> for help.</em>
 			</small>
-		</aside>
+		</nav>
 
 		{'help' === slug &&
 			<Help />
