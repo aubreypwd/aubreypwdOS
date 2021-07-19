@@ -16,8 +16,9 @@ import { fetchPostTextThen } from '../functions.jsx';
 
 import FadeIn from 'react-fade-in';
 
-import highlightJs from 'highlight.js/lib/common';
-import 'highlight.js/styles/github.css';
+import Prism from 'prismjs';
+import 'prism-themes/themes/prism-material-light.css';
+
 
 export default function Post( { slug, navigator } ) {
 	const [ state, setState ] = useState( {} );
@@ -32,10 +33,6 @@ export default function Post( { slug, navigator } ) {
 				html: true,
 				linkify: true,
 				typographer: true,
-
-				// highlight: function ( str, lang ) {
-				// 	return highlightJs.highlightAuto( str ).value;
-				// }
 			} );
 
 			const m = matter( text );
@@ -47,7 +44,9 @@ export default function Post( { slug, navigator } ) {
 					: moment( objectFlip( posts[ navigator ] )[ slug ] ).format( 'MMMM Do, YYYY' ),
 
 				content: ReactHtmlParser( markDownIt.render( m?.content ) ),
-			} )
+			} );
+
+			Prism.highlightAll();
 		} );
 	} );
 

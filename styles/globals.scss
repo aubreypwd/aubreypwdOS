@@ -47,11 +47,18 @@ html {
 
 		code,
 		pre {
-			font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+			&, span {
+				font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+			}
 		}
 
 		pre {
-			// None
+			border-radius: 5px;
+		}
+
+		code {
+			color: $black;
 		}
 
 		.main {

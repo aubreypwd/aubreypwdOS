@@ -11,7 +11,7 @@ So I had to figure out a way to _not_ index files, yet leave them in my sidebar 
 
 According to [this](https://stackoverflow.com/a/40028043/1436129) to tell Sublime _not_ to index a file, yet leave it in the Sidebar you have to adjust `binary_file_patterns` in your user settings, like so:
 
-```json
+```js
 {
     "binary_file_patterns":
     [
@@ -49,6 +49,7 @@ According to [this](https://stackoverflow.com/a/40028043/1436129) to tell Sublim
     ]
 }
 ```
+
 
 And, this, so far, has turned out to be right. And, as you can see, I've included a few other patters I don't care for Sublime to index. I only want Sublime indexing for `Goto Definition` stuff anyways.
 
