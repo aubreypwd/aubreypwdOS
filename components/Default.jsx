@@ -10,7 +10,7 @@ import React, { useEffect } from 'react';
 
 export default function Default( { slug } ) {
 
-	function contentFor( slug ) {
+	function post( slug ) {
 		let flatPosts = getFlatPosts( posts );
 
 		if ( flatPosts.includes( slug ) ) {
@@ -27,38 +27,14 @@ export default function Default( { slug } ) {
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
-		<div className="container">
+		<section className="container">
 			<Masthead slug={slug} />
 
-			<main className="main">
-				<article>
-					{contentFor(slug)}
-				</article>
+			<main>
+				{ post(slug) }
 			</main>
 
 			<Footer />
-		</div>
-
-		<style jsx>{`
-			@import '../styles/variables.scss';
-
-			.container {
-				align-items: center;
-				justify-content: center;
-				margin: auto;
-				padding: 0 2rem;
-				width: 800px;
-
-				@media (max-width: 600px) {
-					width: 100%;
-				}
-			}
-
-			.main {
-				align-items: center;
-				justify-content: center;
-				padding: 2rem 0 2rem 0;
-			}
-		`}</style>
+		</section>
 	</>;
 };

@@ -1,5 +1,4 @@
 import {site} from '../next.config.js';
-import SocialLinks from './SocialLinks.jsx';
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import posts from '../posts.json';
@@ -88,53 +87,17 @@ export default function Navigator( { slug } ) {
 	}
 
 	return <>
-		<div>
-			<input
-				type="text"
-				id="input"
-				onClick={preventDefault}
-				onKeyUp={navigate}
-				autoComplete="off"
-				onFocus={styleInput}
-				onSelect={styleInput}
-				maxLength="19"
-				defaultValue={getDefaultInputValue()} />
-		</div>
-
-		<style jsx>{`
-			@import '../styles/variables.scss';
-
-			input,
-			input:active,
-			input:focus,
-			input:focus-within {
-				border: 0;
-				border-bottom: 1px solid $grey;
-				display: inline;
-				font-family: inherit;
-				font-size: inherit;
-				padding: 0;
-				width: auto;
-				outline: none;
-				font-weight: bold;
-				caret-color: black;
-				width: 100%;
-				dispaly: block;
-
-				&::selection{
-					background: $black;
-					color: $white;
-				}
-
-				&:focus.valid {
-					// Nothing;
-				}
-
-				&.invalid {
-					color: $lightRed;
-				}
-			}
-		`}</style>
+		<input
+			className="navigator"
+			type="text"
+			id="input"
+			onClick={preventDefault}
+			onKeyUp={navigate}
+			autoComplete="off"
+			onFocus={styleInput}
+			onSelect={styleInput}
+			maxLength="19"
+			defaultValue={getDefaultInputValue()} />
 	</>
 };
 

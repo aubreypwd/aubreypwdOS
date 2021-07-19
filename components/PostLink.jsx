@@ -37,44 +37,10 @@ export default function PostLink( { slug, navigator } ) {
 	} );
 
 	return <>
-		<a href={slug}>
+		<a href={slug} className="postlink">
 			<strong>{state.title || 'Unknown'}</strong>
 			<small>{state.date}</small>
 		</a>
-
-		<style jsx>{`
-			@import '../styles/variables.scss';
-
-			a {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				border-bottom: none !important;
-
-				&:hover {
-				}
-
-				strong,
-				small {
-					display: flex;
-					flex-direction: column;
-					flex-basis: 100%;
-					flex: 1;
-					padding: 10px 0;
-					margin: 0;
-				}
-
-				small {
-					display: inline-block;
-					padding-left: 5px;
-					font-style: italic;
-					text-align: right;
-					justify-content: space-between;
-					align-self: center;
-					color: $grey;
-				}
-			}
-		`}</style>
 	</>
 };
 

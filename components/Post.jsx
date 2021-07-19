@@ -57,7 +57,7 @@ export default function Post( { slug, navigator } ) {
 		} );
 	} );
 
-	return <>
+	return <article className="post">
 
 		<FadeIn>
 
@@ -71,35 +71,6 @@ export default function Post( { slug, navigator } ) {
 			</div>
 
 		</FadeIn>
-
-		<style jsx>{`
-			@import '../styles/variables.scss';
-
-			header {
-				margin-bottom: 50px;
-
-				h1,
-				span {
-					display: block;
-				}
-
-				h1 {
-					font-size: 2rem;
-
-					&:first-child {
-						margin-bottom: 5px;
-					}
-				}
-
-				span {
-					padding-left: 0;
-					margin-top: 10px;
-					color: $grey;
-					font-style: italic;
-					padding-left: 10px;
-				}
-			}
-		`}</style>
-	</>
+	</article>
 };
 

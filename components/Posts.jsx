@@ -31,7 +31,7 @@ export default function Posts( { slug } ) {
 
 	return <>
 		<FadeIn>
-			<ul>
+			<ul className="posts">
 				{Object.keys( sorted ).map( date =>
 					<li key={`/${sorted[date]}`}>
 						<PostLink slug={`${sorted[date]}`} navigator={slug} />
@@ -39,30 +39,5 @@ export default function Posts( { slug } ) {
 				)}
 			</ul>
 		</FadeIn>
-
-		<style jsx>{`
-			@import '../styles/variables.scss';
-
-			ul {
-				list-style: none;
-				padding-left: 0;
-				padding-right: 0;
-
-				li {
-					padding: 0;
-					margin: 0;
-
-					border-bottom: 1px dotted $grey;
-
-					&:hover {
-						border-bottom: 1px solid $black;
-					}
-
-					&:last-child {
-						border-bottom-color: transparent;
-					}
-				}
-			}
-		`}</style>
 	</>;
 };
