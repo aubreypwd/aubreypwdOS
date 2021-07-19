@@ -92,16 +92,14 @@ $red: #bf5757;
 						outline: none;
 						padding: 0;
 						text-transform: lowercase;
+						transition: color 1s;
 						width: 100%;
+
 
 						&::selection{
 
 							background: $fg;
 							color: $bg;
-						}
-
-						&:focus.valid {
-							// Nothing;
 						}
 
 						&.invalid {
@@ -120,7 +118,8 @@ $red: #bf5757;
 
 			a {
 
-				border-bottom: 1px dotted $mid;
+				border-bottom: 1px solid $mid;
+				transition: border 0.5s;
 
 				&:hover {
 					border-bottom: 1px solid $fg;
@@ -138,7 +137,8 @@ $red: #bf5757;
 					padding: 0;
 					margin: 0;
 
-					border-bottom: 1px dotted $mid;
+					border-bottom: 1px solid $mid;
+					transition: border 1s;
 
 					&:hover {
 						border-bottom: 1px solid $fg;
@@ -181,6 +181,11 @@ $red: #bf5757;
 			}
 
 			article.post {
+
+				hr {
+					border: 1px solid $mid;
+					opacity: 75%;
+				}
 
 				header {
 
@@ -239,14 +244,21 @@ $red: #bf5757;
 				}
 
 				a {
-					&.id-link,
-					&.id-link:hover {
+					&.id-link {
+
 						border: none;
 						margin-right: 10px;
 						float:right;
 
+						&.id-link:hover {
+							svg {
+								fill: $fg;
+							}
+						}
+
 						svg {
 							fill: $mid;
+							transition: fill 0.5s;
 						}
 					}
 				}
