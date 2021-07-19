@@ -35,11 +35,23 @@ html {
 			img {
 				max-width: 100%;
 			}
+
+			* {
+				line-height: 1.3rem;
+			}
+
+			* {
+				font-family: -apple-system, Arial, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+			}
 		}
 
-		code {
+		code,
+		pre {
 			font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-			border-radius: 3px;
+		}
+
+		pre {
+			// None
 		}
 
 		.main {

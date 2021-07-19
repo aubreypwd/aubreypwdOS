@@ -16,22 +16,28 @@ import { fetchPostTextThen } from '../functions.jsx';
 
 import FadeIn from 'react-fade-in';
 
-import Prism from 'prismjs';
-import 'prismjs/themes/prism-tomorrow.css';
+import highlightJs from 'highlight.js/lib/common';
+import 'highlight.js/styles/github.css';
 
 export default function Post( { slug, navigator } ) {
 	const [ state, setState ] = useState( {} );
-
-	const markDownIt = new MarkdownIt();
 
 	useEffect( () => {
 		if ( state.title ) {
 			return;
 		}
 
-		Prism.highlightAll();
-
 		fetchPostTextThen( slug, text => {
+			const markDownIt = new MarkdownIt( {
+				html: true,
+				linkify: true,
+				typographer: true,
+
+				// highlight: function ( str, lang ) {
+				// 	return highlightJs.highlightAuto( str ).value;
+				// }
+			} );
+
 			const m = matter( text );
 
 			setState( {
