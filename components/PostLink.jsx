@@ -49,6 +49,7 @@ export default function PostLink( { slug, navigator } ) {
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
+				border-bottom: none !important;
 
 				&:hover {
 				}
@@ -59,14 +60,19 @@ export default function PostLink( { slug, navigator } ) {
 					flex-direction: column;
 					flex-basis: 100%;
 					flex: 1;
+					padding: 10px 0;
+					margin: 0;
 				}
 
 				small {
+					display: inline-block;
 					padding-left: 5px;
 					font-style: italic;
 					text-align: right;
+					justify-content: space-between;
+					align-self: center;
+					color: $grey;
 				}
-
 			}
 		`}</style>
 	</>

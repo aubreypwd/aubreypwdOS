@@ -4,7 +4,7 @@ export default function Posts() {
 	return <>
 		<footer>
 			<p>
-				<em>copyright &copy; {site.author}</em>
+				<em><small>Copyright &copy; {site.author}</small></em>
 			</p>
 
 			<p>
@@ -39,6 +39,7 @@ export default function Posts() {
 					flex: 1;
 
 					&:first-child {
+						padding-left: 10px;
 					}
 
 					&:last-child {
