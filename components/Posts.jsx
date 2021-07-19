@@ -6,6 +6,7 @@ import PostLink from '../components/PostLink.jsx';
 import posts from '../posts.json';
 import moment from 'moment';
 
+import FadeIn from 'react-fade-in';
 
 export default function Posts( { slug } ) {
 	if ( ! slug || 'help' === slug ) {
@@ -29,13 +30,15 @@ export default function Posts( { slug } ) {
 	sorted = reverseObject( sorted );
 
 	return <>
-		<ul>
-			{Object.keys( sorted ).map( date =>
-				<li key={`/${sorted[date]}`}>
-					<PostLink slug={`${sorted[date]}`} navigator={slug} />
-				</li>
-			)}
-		</ul>
+		<FadeIn>
+			<ul>
+				{Object.keys( sorted ).map( date =>
+					<li key={`/${sorted[date]}`}>
+						<PostLink slug={`${sorted[date]}`} navigator={slug} />
+					</li>
+				)}
+			</ul>
+		</FadeIn>
 
 		<style jsx>{`
 			ul {

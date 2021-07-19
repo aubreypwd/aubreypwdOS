@@ -14,6 +14,8 @@ import posts from '../posts.json';
 
 import { fetchPostTextThen } from '../functions.jsx';
 
+import FadeIn from 'react-fade-in';
+
 export default function Post( { slug, navigator } ) {
 	const [ state, setState ] = useState( {} );
 
@@ -39,12 +41,19 @@ export default function Post( { slug, navigator } ) {
 	} );
 
 	return <>
-		<header>
-			<h1>{state.title}</h1>
-			<span><datetime>{state.date}</datetime></span>
-		</header>
 
-		{state.content}
+		<FadeIn>
+
+			<header>
+				<h1>{state.title}</h1>
+				<span><datetime>{state.date}</datetime></span>
+			</header>
+
+			<div>
+				{state.content}
+			</div>
+
+		</FadeIn>
 
 		<style jsx>{`
 			@import '../styles/variables.scss';

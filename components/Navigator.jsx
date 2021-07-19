@@ -7,7 +7,6 @@ import { getFlatPosts, getPostCategory } from '../functions.jsx';
 import aZKeyCodes from '../a-z-keycodes.json';
 
 export default function Navigator( { slug } ) {
-
 	const router = useRouter();
 
 	useEffect( () => {
@@ -97,6 +96,7 @@ export default function Navigator( { slug } ) {
 				onKeyUp={navigate}
 				autoComplete="off"
 				onFocus={styleInput}
+				onSelect={styleInput}
 				maxLength="19"
 				defaultValue={getDefaultInputValue()} />
 		</div>
