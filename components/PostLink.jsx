@@ -12,26 +12,28 @@ import moment from 'moment';
 
 import posts from '../posts.json';
 
+import { fetchPostTextThen } from '../functions.jsx';
+
 export default function PostLink( { slug, navigator } ) {
 	const [ state, setState ] = useState( {} );
 
 	const markDownIt = new MarkdownIt();
 
 	useEffect( () => {
-		fetch( `../content/md/posts/${slug}.md` )
-			.then( response => response.text() )
-			.then( text => {
-				const m    = matter( text );
-				const md   = markDownIt.render( m?.content );
-				const html = ReactHtmlParser( md );
+		if ( state.title ) {
+			return;
+		}
 
-				setState( {
-					title: m.data?.title,
-					date:  m.data?.date
-						? moment( m.data.date.toString() ).format( 'MMMM Do, YYYY' )
-						: moment( objectFlip( posts[ navigator ] )[ slug ] ).format( 'MMMM Do, YYYY' ),
-				} )
-			} );
+		fetchPostTextThen( slug, text => {
+			const m = matter( text );
+
+			setState( {
+				title: m.data?.title,
+				date:  m.data?.date
+					? moment( m.data.date.toString() ).format( 'MMMM Do, YYYY' )
+					: moment( objectFlip( posts[ navigator ] )[ slug ] ).format( 'MMMM Do, YYYY' ),
+			} )
+		} );
 	} );
 
 	return <>

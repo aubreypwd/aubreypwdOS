@@ -1,6 +1,6 @@
 module.exports = {
 
-	getFlatPosts: ( posts ) => {
+	getFlatPosts: posts => {
 		let flatPosts = [];
 
 		Object.keys( posts ).map( category => {
@@ -14,7 +14,7 @@ module.exports = {
 		return flatPosts;
 	},
 
-	getPostCategory( post, posts ) {
+	getPostCategory: ( post, posts ) => {
 		let category = null;
 
 		Object.keys( posts ).map( cat => {
@@ -28,5 +28,12 @@ module.exports = {
 		} );
 
 		return category || post;
-	}
+	},
+
+	fetchPostTextThen: ( slug, t ) => {
+
+		fetch( `../content/md/posts/${slug}.md` )
+			.then( response => response.text() )
+			.then( text => t( text ) );
+	},
 };

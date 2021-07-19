@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import posts from '../posts.json';
 import { getFlatPosts, getPostCategory } from '../functions.jsx';
+import aZKeyCodes from '../a-z-keycodes.json';
 
 export default function Navigator( { slug } ) {
 
@@ -21,12 +22,15 @@ export default function Navigator( { slug } ) {
 	} );
 
 	const valids = [
+
+		// Any of the categories.
 		...Object.keys( posts ),
+
+		// Or help.
 		'help',
-		'?',
 	];
 
-	function click( event ) {
+	function preventDefault( event ) {
 		event.preventDefault();
 	}
 
@@ -35,7 +39,7 @@ export default function Navigator( { slug } ) {
 			'?' === event.target.value;
 	}
 
-	function focus( event ) {
+	function styleInput( event ) {
 		event.preventDefault();
 
 		// Always reset.
@@ -56,8 +60,12 @@ export default function Navigator( { slug } ) {
 		event.target.classList.add( 'valid' );
 	}
 
-	function up( event ) {
-		focus( event );
+	function navigate( event ) {
+		styleInput( event );
+
+		if ( ! aZKeyCodes.includes( event.code ) ) {
+			return; // Not a-z.
+		}
 
 		if ( '' === event.target.value ) {
 			router.push( '/' );
@@ -85,10 +93,10 @@ export default function Navigator( { slug } ) {
 			<input
 				type="text"
 				id="input"
-				onClick={click}
-				onKeyUp={up}
+				onClick={preventDefault}
+				onKeyUp={navigate}
 				autoComplete="off"
-				onFocus={focus}
+				onFocus={styleInput}
 				maxLength="19"
 				defaultValue={getDefaultInputValue()} />
 		</div>
