@@ -1,4 +1,4 @@
-import {site} from '../next.config.js';
+import site from '../config.json';
 
 import IconLinks from './IconLinks.jsx';
 import Navigator from './Navigator.jsx';

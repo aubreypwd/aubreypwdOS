@@ -1,4 +1,4 @@
-import {site} from '../next.config.js';
+import site from '../config.json';
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import posts from '../posts.json';

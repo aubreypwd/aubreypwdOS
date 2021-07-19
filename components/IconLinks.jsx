@@ -1,4 +1,4 @@
-import {site} from '../next.config.js';
+import site from '../config.json';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import IconLink from './IconLink.jsx';
 

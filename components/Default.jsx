@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {site} from '../next.config.js';
+import site from '../config.json';
 import Masthead from '../components/Masthead.jsx';
 import Posts from '../components/Posts.jsx';
 import Footer from '../components/Footer.jsx';

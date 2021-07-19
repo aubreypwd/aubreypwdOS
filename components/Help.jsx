@@ -1,4 +1,4 @@
-import {site} from '../next.config.js';
+import site from '../config.json';
 import FadeIn from 'react-fade-in';
 
 export default function Help( { slug } ) {

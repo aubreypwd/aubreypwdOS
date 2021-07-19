@@ -1,4 +1,4 @@
-import {site} from '../next.config.js';
+import site from '../config.json';
 
 export default function Posts() {
 	return <>
