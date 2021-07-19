@@ -12,7 +12,7 @@ import moment from 'moment';
 
 import posts from '../posts.json';
 
-export default function PostLink( { slug, navigator } ) {
+export default function Post( { slug, navigator } ) {
 	const [ state, setState ] = useState( {} );
 
 	const markDownIt = new MarkdownIt();
@@ -21,50 +21,47 @@ export default function PostLink( { slug, navigator } ) {
 		fetch( `../content/md/posts/${slug}.md` )
 			.then( response => response.text() )
 			.then( text => {
-				const m    = matter( text );
-				const md   = markDownIt.render( m?.content );
-				const html = ReactHtmlParser( md );
+				const m = matter( text );
 
 				setState( {
 					title: m.data?.title,
 					date:  m.data?.date
 						? moment( m.data.date.toString() ).format( 'MMMM Do, YYYY' )
 						: moment( objectFlip( posts[ navigator ] )[ slug ] ).format( 'MMMM Do, YYYY' ),
+
+					content: ReactHtmlParser( markDownIt.render( m?.content ) ),
 				} )
 			} );
 	} );
 
 	return <>
-		<a href={slug}>
-			<strong>{state.title || 'Unknown'}</strong>
-			<small>{state.date}</small>
-		</a>
+		<header>
+			<h1>{state.title}</h1>
+			<div><small><date>{state.date}</date></small></div>
+		</header>
+
+		{state.content}
 
 		<style jsx>{`
 			@import '../styles/variables.scss';
 
-			a {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
+			header {
 
-				&:hover {
+				h1 {
+					&:first-child {
+						margin-bottom: 5px;
+					}
 				}
 
-				strong,
-				small {
-					display: flex;
-					flex-direction: column;
-					flex-basis: 100%;
-					flex: 1;
-				}
+				div {
+					margin-bottom: 40px;
 
-				small {
-					padding-left: 5px;
-					font-style: italic;
-					text-align: right;
+					date {
+						color: $grey;
+						font-style: italic;
+						font-weight: bold;
+					}
 				}
-
 			}
 		`}</style>
 	</>

@@ -3,8 +3,23 @@ import {site} from '../next.config.js';
 import Masthead from '../components/Masthead.jsx';
 import Posts from '../components/Posts.jsx';
 import Footer from '../components/Footer.jsx';
+import Post from '../components/Post.jsx';
+import posts from '../posts.json';
+import {getFlatPosts} from '../functions.jsx';
 
 export default function Default( { slug } ) {
+
+
+	function content( slug ) {
+		let flatPosts = getFlatPosts( posts );
+
+		if ( flatPosts.includes( slug ) ) {
+			return <Post slug={slug} />
+		}
+
+		return <Posts slug={slug} />
+	}
+
 	return <>
 		<Head>
 			<title>{site.title} by {site.author} &mdash; {site.description}</title>
@@ -17,7 +32,7 @@ export default function Default( { slug } ) {
 
 			<main className="main">
 				<article>
-					<Posts slug={slug} />
+					{content(slug)}
 				</article>
 			</main>
 

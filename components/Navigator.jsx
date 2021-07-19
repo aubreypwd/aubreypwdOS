@@ -3,21 +3,28 @@ import SocialLinks from './SocialLinks.jsx';
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import posts from '../posts.json';
+import { getFlatPosts, getPostCategory } from '../functions.jsx';
 
 export default function Navigator( { slug } ) {
 
 	const router = useRouter();
+
+	useEffect( () => {
+		const input = document.getElementById( 'input' );
+
+		if ( ! input ) {
+			return;
+		}
+
+		input.focus();
+		input.select();
+	} );
 
 	const valids = [
 		...Object.keys( posts ),
 		'help',
 		'?',
 	];
-
-	useEffect( () => {
-		document.getElementById( 'input' ).focus();
-		document.getElementById( 'input' ).select();
-	} );
 
 	function click( event ) {
 		event.preventDefault();
@@ -69,6 +76,10 @@ export default function Navigator( { slug } ) {
 		router.push( event.target.value );
 	}
 
+	function getDefaultInputValue() {
+		return getPostCategory( slug, posts );
+	}
+
 	return <>
 		<div>
 			<input
@@ -79,7 +90,7 @@ export default function Navigator( { slug } ) {
 				autoComplete="off"
 				onFocus={focus}
 				maxLength="19"
-				defaultValue={slug || ''} />
+				defaultValue={getDefaultInputValue()} />
 		</div>
 
 		<style jsx>{`
