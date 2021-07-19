@@ -13,6 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "~5.15.3",
     "@fortawesome/free-solid-svg-icons": "~5.15.3",
     "@fortawesome/react-fontawesome": "~0.1.14",
+    "@gerhobbelt/markdown-it-github-headings": "~2.0.0-2",
     "deep-sort-object": "~1.0.2",
     "gray-matter": "~4.0.3",
     "markdown-it": "~12.1.0",

@@ -35,6 +35,13 @@ export default function Post( { slug, navigator } ) {
 				typographer: true,
 			} );
 
+			markDownIt.use( require( '@gerhobbelt/markdown-it-github-headings' ), {
+				enableHeadingLinkIcons: true,
+				prefix: false,
+				prefixHeadingIds: false,
+				className: 'id-link',
+			} );
+
 			const m = matter( text );
 
 			setState( {

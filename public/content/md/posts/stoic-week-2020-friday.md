@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Morning {#morning}
+## Morning 
 
 >  It isn’t the things themselves that disturb people, but the judgements that they form about them. Death, for instance, is nothing terrible, or else it would have seemed so to Socrates too; no, it is in the judgement that death is terrible that the terror lies. Accordingly, whenever we are impeded, disturbed or distressed, we should never blame anyone else but only ourselves, that is, our judgements. It is an act of a poorly educated person to blame others when things are going badly for him; one who has taken the first step towards being properly educated blames himself, while one who is fully educated blames neither anyone else nor himself. – Epictetus, Handbook, 5
 

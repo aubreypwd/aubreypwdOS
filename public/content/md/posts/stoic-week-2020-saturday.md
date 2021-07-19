@@ -13,7 +13,7 @@ tags:
 
 ---
 
-## Morning {#morning}
+## Morning 
 
 > Be like the headland, on which the waves break constantly, which still stands firm, while the foaming waters are put to rest around it. ‘It is my bad luck that this has happened to me.’ On the contrary, say, ‘It is my good luck that, although this has happened to me, I can bear it without getting upset, neither crushed by the present nor afraid of the future.’ This kind of event could have happened to anyone, but not everyone would have borne it without getting upset. – Marcus Aurelius, Meditations, 4.49
 
@@ -27,7 +27,7 @@ The world still sucks when you become a Stoic, and as you improve as a Stoic. No
 
 ---
 
-## Evening {#evening}
+## Evening 
 
 >  Glad and cheerful, let us say, as we go to our rest: ‘I have finished living; I have run the course that fortune set for me’. If God gives us another day, let us receive it with joy. The happiest person, who owns himself more fully, is the one who waits for the next day without anxiety. Anyone who can say, ‘I have had my life’ rises with a bonus, receiving one more day. – Seneca, Letters, 12.9.
 

@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Morning {#morning}
+## Morning 
 
 >  If you can find anything in human life better than justice, truthfulness, self-control, courage turn to it with all your heart and enjoy the supreme good that you have found but if you find all other things to be trivial and valueless in comparison with virtue, give no room to anything else, since, once you turn towards that and divert from your proper path, you will no longer be able without inner conflict to give the highest honour to what is properly good. It is not right to set up as a rival to the rational and social good anything alien to its nature, such as the praise of the many, or positions of power, wealth, or enjoyment of pleasures. – Marcus Aurelius, Meditations, 3.6
 
@@ -57,7 +57,7 @@ When I look in the mirror, I'm happy with _myself_ and who I am. That, I think, 
 
 ---
 
-## Afternoon {#afternoon}
+## Afternoon 
 
 > Draw up a list of what you think the most important qualithees are for living a good human life.
 
@@ -84,7 +84,7 @@ _Note, my mid-day got busy and I did this during my [evening](#evening) exercise
 
 ---
 
-## Evening {#evening}
+## Evening 
 
 > From what did we gain an understanding of virtue? From someone’s orderly character, his sense of what is appropriate and consistency, the harmony between all his actions, <strong>and his greatness of spirit in coping with everything.</strong> In this way, we came to understand the happy life, that flows on smoothly and is completely under its own control. – Seneca, Letters, 120.11
 

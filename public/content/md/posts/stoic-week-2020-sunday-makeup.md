@@ -9,12 +9,11 @@ tags:
 ![Stoic Week Image](/assets/images/1669160376/stoic-week.png)
 
 - [Morning](#morning)
-- [Afternoon](#afternoon)
 - [Evening](#evening)
 
 ---
 
-## Morning {#morning}
+## Morning
 
 >  The works of the gods are full of providence, and the works of fortune are not separate from nature or the interweaving and intertwining of the things governed by providence. Everything flows from there. Further factors are necessity and the benefit of the whole universe, of which you are a part. What is brought by the nature of the whole and what maintains that nature is good for each part of nature. Just as the changes in the elements maintain the universe so too do the changes in the compounds. — Marcus Aurelius, Meditations, 2.3
 
@@ -24,7 +23,7 @@ So, now when my friends ask me if I believe in God &mdash; well yeah &mdash; but
 
 ---
 
-## Evening (#evening)
+## Evening
 
 > I travel along nature’s way until I fall down and take my rest, breathing out my last into the air, from which I draw my daily breath, and falling down to that earth from which my father drew his seed, my mother her blood and my nurse her milk, and from which for so many years I have taken my daily food and drink, the earth which carries my footsteps and which I have used to the full in so many ways. — Marcus Aurelius, Meditations, 5.4
 

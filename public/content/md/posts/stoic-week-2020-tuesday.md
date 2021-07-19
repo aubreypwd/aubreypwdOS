@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Morning {#morning}
+## Morning 
 
 > Morning Text for Reflection
 >
@@ -40,7 +40,7 @@ So I implor myself, and you, _Memento Mori_, or, remember how you would like to 
 
 ---
 
-## Afternoon {#afternoon}
+## Afternoon 
 
 > Happiness, in modern terms, tends to mean having certain emotions (‘feeling happy’) or pleasurable experiences. Ancient thinkers saw happiness (Greek, eudaimonia) as the overall goal or purpose of your life, the aim that gives meaning and shape to your life as a whole. They sometimes defined happiness as living in a certain way, a way that you can yourself determine by your own efforts. During this lunchtime, spend a few minutes thinking about happiness in this way and also reflecting on the Stoic idea of happiness... Do you think the Stoic idea of happiness could help you give more focus and coherence to your life?
 
@@ -58,7 +58,7 @@ _Note, my afternoon writing actually happened in the evening..._
 
 ---
 
-## Evening {#evening}
+## Evening 
 
 > Will there come a day, my soul, when you are good and simple and unified
 

@@ -14,7 +14,7 @@ tags:
 
 ---
 
-## Morning {#morning}
+## Morning 
 
 >  It is important to understand that nature creates in parents affection for their children; and parental affection is the source from which we trace the shared community of the human race … As it is obvious that it is natural to us to shrink from pain, so it is clear that we derive from nature itself the motive to love those to whom we have given birth. From this motive is developed the mutual concern which unites human beings as such. The fact of their common humanity means that one person should feel another to be his relative. – Cicero, On Ends, 3.62-3.
 
@@ -28,7 +28,7 @@ Either way, it reminds me that the ability to _listen_ to that _divine light of 
 
 ---
 
-## Evening {#evening}
+## Evening 
 
 This week has all been about Justice (the virtue) for me. I've always summed it down to being fair, or performing the golden rule. But I've never really looked at it from the point of view of benefiting myself. As I have been explaining in my other writings this week, seeing service to your community as a benefit to yourself, and ultimately your character, gives it new meaning. Not only am I working for the benefit of others (just from the sheer nature of e.g. compassion, empathy, and sympathy &mdash; as I explained [this morning](#morning)), but also for my own benefit.
 
