@@ -4,7 +4,7 @@ date: 2020-10-10
 images: [ "images/2308529140/IMG_0912.jpg" ]
 ---
 
-About 2 weeks ago I bought an [Apple Watch SE](https://www.apple.com/apple-watch-se/). This is my review/experience so far. 
+About 2 weeks ago I bought an [Apple Watch SE](https://www.apple.com/apple-watch-se/). This is my review/experience so far.
 
 _Note that I do not sync things to my watch, as I prefer to play most things directly from my iPhone, just a quick note for the below, as I'm not doing any syncing for Music, Audiobooks, and Podcasts._
 

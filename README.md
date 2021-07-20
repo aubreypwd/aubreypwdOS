@@ -32,3 +32,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Todos
 
 - [ ] Get rid of `pages/coding.jsx` and `pages/philosophy.jsx` and have them route through `[slug.jsx]` instead
+- [ ] `help` is broken on Tuesday, 7/20/2021 1:57:44 PM
