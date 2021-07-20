@@ -160,7 +160,11 @@
 						&:hover,
 						&:focus {
 							color: $fg;
-							transition: color 1s;
+
+							small {
+								color: $fg;
+								transition: color 2s;
+							}
 						}
 
 						strong,
