@@ -22,6 +22,7 @@
 
 			color: $fg;
 			text-decoration: none;
+			transition: color 0.5s;
 		}
 
 		header {
@@ -143,12 +144,12 @@
 					border-bottom: 1px solid $mid;
 					margin: 0;
 					padding: 0;
-					transition: border 1s;
 
-					&:hover,
-					&:focus {
-						border-bottom: 1px solid $fg;
-					}
+					// &:hover,
+					// &:focus {
+					// 	border-bottom: 1px solid $fg;
+					// 	transition: border 1s;
+					// }
 
 					&:last-child {
 						border-bottom-color: transparent;
@@ -161,12 +162,11 @@
 						flex-direction: row;
 						flex-wrap: wrap;
 						border-bottom: 1px solid transparent;
-						transition: color 0.5s;
-						transition: border 0.2s;
 
 						&:hover,
 						&:focus {
 							color: $fg;
+							transition: color 1s;
 						}
 
 						strong,
