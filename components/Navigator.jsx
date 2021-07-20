@@ -9,9 +9,10 @@ export default function Navigator( { slug } ) {
 
 	const router = useRouter();
 
-	slug = slug?.toLowerCase();
+	slug = sanitizeSlug( slug );
 
 	useEffect( () => {
+
 		const input = document.getElementById( 'input' );
 
 		if ( ! input ) {
@@ -35,14 +36,20 @@ export default function Navigator( { slug } ) {
 		event.preventDefault();
 	}
 
+	function sanitizeSlug( slug ) {
+		return slug.toLowerCase().replace( ' ', '-' );
+	}
+
 	function isHelp( value ) {
-		value = value?.toLowerCase();
+
+		value = sanitizeSlug( value );
 
 		return 'help' === event.target.value ||
 			'?' === event.target.value;
 	}
 
 	function styleInput( event ) {
+
 		event.preventDefault();
 
 		// Always reset.
@@ -70,14 +77,16 @@ export default function Navigator( { slug } ) {
 			return; // Not a-z.
 		}
 
-		const value = event.target.value.toLowerCase();
+		const value = sanitizeSlug( event.target.value );
 
 		if ( '' === value ) {
+
 			router.push( '/' );
 			return;
 		}
 
 		if ( isHelp( value ) ) {
+
 			router.push( '/help' );
 			return;
 		}
