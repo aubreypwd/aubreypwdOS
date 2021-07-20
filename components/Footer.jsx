@@ -8,7 +8,7 @@ export default function Posts() {
 			</p>
 
 			<p>
-				<small>Built on Next</small>
+				<small>Built on <a href="https://nextjs.org/" rel="noreferrer" target="_blank">Next.js</a></small>
 			</p>
 		</footer>
 	</>;
