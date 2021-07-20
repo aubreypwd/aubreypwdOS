@@ -5,7 +5,7 @@ export default function Help( { slug } ) {
 	return <>
 		<FadeIn>
 			<p>
-				Try <strong>coding</strong> or <strong>philosophy</strong>.
+				Try <em>words</em> like <strong>coding</strong> or <strong>philosophy</strong>.
 			</p>
 		</FadeIn>
 	</>
