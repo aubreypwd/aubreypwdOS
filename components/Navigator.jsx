@@ -37,7 +37,7 @@ export default function Navigator( { slug } ) {
 	}
 
 	function sanitizeSlug( slug ) {
-		return slug.toLowerCase().replace( ' ', '-' );
+		return slug?.toLowerCase().replace( ' ', '-' );
 	}
 
 	function isHelp( value ) {
