@@ -26,7 +26,7 @@ export default function Default( { slug } ) {
 
 	return <>
 		<Head>
-			<title>{site.title.replace( 'something', slug ).replace( '.', '' )} by {site.author}, {site.description}</title>
+			<title>{site.title.replace( 'something', slug || 'something' ).replace( '.', '' )} by {site.author}, {site.description}</title>
 			<meta name="description" content={site.description} />
 
 			<link rel="icon" href="https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/?s=32" />
