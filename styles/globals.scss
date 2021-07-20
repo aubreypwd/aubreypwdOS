@@ -90,21 +90,21 @@
 						border-left: 0;
 						color: $active;
 						caret-color: $mid;
-						dispaly: block;
-						display: inline;
+						display: block;
 						font-family: inherit;
 						font-size: inherit;
 						font-weight: bold;
 						outline: none;
 						padding: 0;
+						margin: 0;
 						text-transform: lowercase;
 						transition: color 1s;
 						width: 100%;
 
 						&::selection{
 
-							background: $fg;
-							color: $bg;
+							background: $mid;
+							color: $fg;
 						}
 
 						&.invalid {
@@ -145,19 +145,13 @@
 					margin: 0;
 					padding: 0;
 
-					// &:hover,
-					// &:focus {
-					// 	border-bottom: 1px solid $fg;
-					// 	transition: border 1s;
-					// }
-
 					&:last-child {
 						border-bottom-color: transparent;
 					}
 
 					a.postlink {
 
-						color: $mid;
+						color: $fg;
 						display: flex;
 						flex-direction: row;
 						flex-wrap: wrap;
@@ -340,9 +334,9 @@ html {
 	}
 
 	body {
-		@include body( black, white, #00000059 );
+		@include body( black, white, #00000073 );
 
-		@media (prefers-color-scheme: dark) {
+		@media ( prefers-color-scheme: dark ) {
 			@include body( white, black, #ffffff5c );
 		}
 	}
