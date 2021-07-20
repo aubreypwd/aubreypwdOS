@@ -1,33 +1,35 @@
-import { Link } from 'react-router';
-
-import React, { useState, useEffect } from 'react';
-
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
-
-import matter from 'gray-matter';
-import MarkdownIt from 'markdown-it';
-import objectFlip from 'object-flip';
-import sortobject from 'deep-sort-object';
-import moment from 'moment';
-
-import posts from '../posts.json';
-
-import { fetchPostTextThen } from '../functions.jsx';
-
 import FadeIn from 'react-fade-in';
-
+import MarkdownIt from 'markdown-it';
+import matter from 'gray-matter';
+import moment from 'moment';
+import objectFlip from 'object-flip';
+import posts from '../posts.json';
 import Prism from 'prismjs';
+import React, { useState, useEffect } from 'react';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import sortobject from 'deep-sort-object';
+import { fetchPostTextThen } from '../functions.jsx';
+import { getFlatPosts } from '../functions.jsx';
+import { Link } from 'react-router';
 import 'prism-themes/themes/prism-material-dark.css';
 
-export default function Post( { slug, navigator } ) {
+export default function Post( { slug } ) {
 	const [ state, setState ] = useState( {} );
 
+	const flatPosts = getFlatPosts( posts );
+
 	useEffect( () => {
-		if ( state.title ) {
-			return;
+
+		if ( state.title && flatPosts.includes( slug ) ) {
+			return; // Published posts seek only once, drafts can update as content is updated (live state).
 		}
 
 		fetchPostTextThen( slug, text => {
+
+			if ( 'undefined' === typeof slug ) {
+				return; // Why does this happen even?s
+			}
+
 			const markDownIt = new MarkdownIt( {
 				html: true,
 				linkify: true,
@@ -42,12 +44,13 @@ export default function Post( { slug, navigator } ) {
 			} );
 
 			const m = matter( text );
+			const flatPosts = getFlatPosts( posts );
 
 			setState( {
-				title: m.data?.title,
-				date:  m.data?.date
-					? moment( m.data.date.toString() ).format( 'MMMM Do, YYYY' )
-					: moment( objectFlip( posts[ navigator ] )[ slug ] ).format( 'MMMM Do, YYYY' ),
+				title:   m.data?.title,
+				date:   flatPosts.includes( slug )
+					? moment( objectFlip( flatPosts )[ slug ] ).format( 'MMMM Do, YYYY' )
+					: 'Unpublished',
 
 				content: ReactHtmlParser( markDownIt.render( m?.content ) ),
 			} );

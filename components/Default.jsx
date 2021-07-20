@@ -4,20 +4,24 @@ import Masthead from '../components/Masthead.jsx';
 import Posts from '../components/Posts.jsx';
 import Footer from '../components/Footer.jsx';
 import Post from '../components/Post.jsx';
-import posts from '../posts.json';
-import {getFlatPosts} from '../functions.jsx';
 import React, { useEffect } from 'react';
+import posts from '../posts.json';
 
 export default function Default( { slug } ) {
 
-	function post( slug ) {
-		let flatPosts = getFlatPosts( posts );
+	function content( slug ) {
 
-		if ( flatPosts.includes( slug ) ) {
-			return <Post slug={slug} />
+		if ( 'undefined' === typeof slug ) {
+			return <></>; // Why does this happen?
 		}
 
-		return <Posts slug={slug} />
+		// Is a category, show it's posts.
+		if ( Object.keys( posts ).includes( slug ) ) {
+			return <Posts slug={slug} />
+		}
+
+		// Must be a post or un-published post.
+		return <Post slug={slug} />
 	}
 
 	return <>
@@ -32,7 +36,7 @@ export default function Default( { slug } ) {
 			<Masthead slug={slug} />
 
 			<main>
-				{ post(slug) }
+				{ content(slug) }
 			</main>
 
 			<Footer />

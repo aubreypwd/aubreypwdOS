@@ -34,7 +34,7 @@ export default function Posts( { slug } ) {
 			<ul className="posts">
 				{Object.keys( sorted ).map( date =>
 					<li key={`/${sorted[date]}`}>
-						<PostLink slug={`${sorted[date]}`} navigator={slug} />
+						<PostLink slug={`${sorted[date]}`} />
 					</li>
 				)}
 			</ul>

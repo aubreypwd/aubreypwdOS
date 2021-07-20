@@ -27,7 +27,7 @@ module.exports = {
 			} );
 		} );
 
-		return category || post;
+		return category || post || '';
 	},
 
 	fetchPostTextThen: ( slug, t ) => {

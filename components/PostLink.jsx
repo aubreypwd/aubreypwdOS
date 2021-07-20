@@ -14,7 +14,9 @@ import posts from '../posts.json';
 
 import { fetchPostTextThen } from '../functions.jsx';
 
-export default function PostLink( { slug, navigator } ) {
+import { getFlatPosts } from '../functions.jsx';
+
+export default function PostLink( { slug } ) {
 	const [ state, setState ] = useState( {} );
 
 	const markDownIt = new MarkdownIt();
@@ -31,7 +33,7 @@ export default function PostLink( { slug, navigator } ) {
 				title: m.data?.title,
 				date:  m.data?.date
 					? moment( m.data.date.toString() ).format( 'MMMM Do, YYYY' )
-					: moment( objectFlip( posts[ navigator ] )[ slug ] ).format( 'MMMM Do, YYYY' ),
+					: moment( objectFlip( getFlatPosts( posts ) )[ slug ] ).format( 'MMMM Do, YYYY' ),
 			} )
 		} );
 	} );
