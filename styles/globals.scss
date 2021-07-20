@@ -1,8 +1,9 @@
 @mixin body( $fg, $bg, $mid ) {
 
-	$error: $mid;
-	$mobile: 600px;
 	$active: $fg;
+	$error: $mid;
+
+	$mobile: 600px;
 
 	background-color: $bg;
 	color: $fg;
