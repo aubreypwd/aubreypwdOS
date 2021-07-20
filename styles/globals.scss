@@ -1,8 +1,7 @@
-$green: #63a263;
-$red: #bf5757;
-$mobile: 600px;
-
 @mixin body( $fg, $bg, $mid ) {
+	$error: $mid;
+	$mobile: 600px;
+	$active: $fg;
 
 	background-color: $bg;
 	color: $fg;
@@ -88,8 +87,8 @@ $mobile: 600px;
 						border-top: 0;
 						border-right: 0;
 						border-left: 0;
-						color: $fg;
-						caret-color: $fg;
+						color: $active;
+						caret-color: $mid;
 						dispaly: block;
 						display: inline;
 						font-family: inherit;
@@ -101,7 +100,6 @@ $mobile: 600px;
 						transition: color 1s;
 						width: 100%;
 
-
 						&::selection{
 
 							background: $fg;
@@ -109,7 +107,7 @@ $mobile: 600px;
 						}
 
 						&.invalid {
-							color: $red;
+							color: $error;
 						}
 					}
 				}
@@ -127,7 +125,8 @@ $mobile: 600px;
 				border-bottom: 1px solid $mid;
 				transition: border 0.5s;
 
-				&:hover {
+				&:hover,
+				&:focus {
 					border-bottom: 1px solid $fg;
 				}
 			}
@@ -141,13 +140,13 @@ $mobile: 600px;
 
 				li {
 
-					padding: 0;
-					margin: 0;
-
 					border-bottom: 1px solid $mid;
+					margin: 0;
+					padding: 0;
 					transition: border 1s;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						border-bottom: 1px solid $fg;
 					}
 
@@ -157,10 +156,18 @@ $mobile: 600px;
 
 					a.postlink {
 
+						color: $mid;
 						display: flex;
 						flex-direction: row;
 						flex-wrap: wrap;
 						border-bottom: 1px solid transparent;
+						transition: color 0.5s;
+						transition: border 0.2s;
+
+						&:hover,
+						&:focus {
+							color: $fg;
+						}
 
 						strong,
 						small {
@@ -257,7 +264,8 @@ $mobile: 600px;
 						margin-right: 10px;
 						float:right;
 
-						&.id-link:hover {
+						&.id-link:hover,
+						&.id-link:focus {
 							svg {
 								fill: $fg;
 							}
@@ -300,6 +308,18 @@ $mobile: 600px;
 				&:last-child {
 					text-align: right;
 					font-weight: bold;
+
+					a {
+						color: $mid;
+						border-bottom: 1px dotted $mid;
+						transition: border 0.5s;
+						transition: color 0.5s;
+
+						&:hover,
+						&:focus {
+							color: $fg;
+						}
+					}
 				}
 			}
 		}
@@ -320,10 +340,10 @@ html {
 	}
 
 	body {
-		@include body( black, white, #00000036 );
+		@include body( black, white, #00000059 );
 
 		@media (prefers-color-scheme: dark) {
-			@include body( white, black, #ffffff73 );
+			@include body( white, black, #ffffff5c );
 		}
 	}
 }
