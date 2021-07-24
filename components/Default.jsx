@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import site from '../config.json';
+import config from '../config.json';
 import Masthead from '../components/Masthead.jsx';
 import Posts from '../components/Posts.jsx';
 import Footer from '../components/Footer.jsx';
@@ -7,6 +7,7 @@ import Post from '../components/Post.jsx';
 import React, { useEffect } from 'react';
 import posts from '../posts.json';
 import Help from './Help.jsx';
+import {title} from '../functions.jsx';
 
 export default function Default( { slug } ) {
 
@@ -30,9 +31,10 @@ export default function Default( { slug } ) {
 	}
 
 	return <>
+
 		<Head>
-			<title>{site.title.replace( 'something', slug || 'something' ).replace( '.', '' )} by {site.author}, {site.description}</title>
-			<meta name="description" content={site.description} />
+			<title>{title( slug )}</title>
+			<meta name="description" content={config.description} />
 
 			<link rel="icon" href="https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/?s=32" />
 		</Head>

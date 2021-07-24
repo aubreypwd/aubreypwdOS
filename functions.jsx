@@ -1,3 +1,5 @@
+import config from './config.json';
+
 module.exports = {
 
 	getFlatPosts: posts => {
@@ -35,5 +37,9 @@ module.exports = {
 		fetch( `../content/md/posts/${slug}.md` )
 			.then( response => response.text() )
 			.then( text => t( text ) );
+	},
+
+	title: ( slug ) => {
+		return config.title.replace( 'something', slug || 'something' ).replace( '.', '' ) + `by ${config.author}, ${config.description}`;
 	},
 };
