@@ -159,6 +159,11 @@
 						flex-direction: row;
 						flex-wrap: wrap;
 
+						&[href="its-time-to-love-coding-again"],
+						&[href="its-time-to-love-coding-again"]:hover {
+							color: #ff00ff;
+						}
+
 						&:hover,
 						&:focus {
 							color: $fg;
@@ -194,6 +199,14 @@
 			}
 
 			article.post {
+
+				&.its-time-to-love-coding-again {
+					header {
+						h1 {
+							color: #ff00ff;
+						}
+					}
+				}
 
 				hr {
 					border: 1px solid $mid;

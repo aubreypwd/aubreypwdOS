@@ -7,7 +7,7 @@ export default function Lead( { slug } ) {
 	return <>
 		<nav className="lead">
 			<h2>
-				It&apos;s time to love <Navigator slug={slug} /> again.
+				It&apos;s time to love <Navigator slug={slug} /> again
 			</h2>
 
 			<div className="by">

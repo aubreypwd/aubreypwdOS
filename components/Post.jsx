@@ -59,7 +59,7 @@ export default function Post( { slug } ) {
 		} );
 	} );
 
-	return <article className="post">
+	return <article className={`post ${slug}`}>
 
 		<FadeIn>
 
