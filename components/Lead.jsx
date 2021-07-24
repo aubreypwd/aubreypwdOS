@@ -14,8 +14,6 @@ export default function Lead( { slug } ) {
 				by <strong>{site.author}</strong> <em>(type <strong>help</strong> for help)</em>
 			</div>
 		</nav>
-
-		{ 'help' === slug && <Help /> }
 	</>
 };
 

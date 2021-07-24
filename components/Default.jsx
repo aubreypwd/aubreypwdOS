@@ -6,6 +6,7 @@ import Footer from '../components/Footer.jsx';
 import Post from '../components/Post.jsx';
 import React, { useEffect } from 'react';
 import posts from '../posts.json';
+import Help from './Help.jsx';
 
 export default function Default( { slug } ) {
 
@@ -13,6 +14,10 @@ export default function Default( { slug } ) {
 
 		if ( 'undefined' === typeof slug ) {
 			return <></>; // Why does this happen?
+		}
+
+		if ( 'help' === slug ) {
+			return <Help />
 		}
 
 		// Is a category, show it's posts.

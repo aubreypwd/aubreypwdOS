@@ -6,7 +6,6 @@ import { getFlatPosts, getPostCategory } from '../functions.jsx';
 import aZKeyCodes from '../a-z-keycodes.json';
 
 export default function Navigator( { slug } ) {
-
 	const router = useRouter();
 
 	slug = sanitizeSlug( slug );
@@ -41,11 +40,7 @@ export default function Navigator( { slug } ) {
 	}
 
 	function isHelp( value ) {
-
-		value = sanitizeSlug( value );
-
-		return 'help' === event.target.value ||
-			'?' === event.target.value;
+		return 'help' === sanitizeSlug( value );
 	}
 
 	function styleInput( event ) {

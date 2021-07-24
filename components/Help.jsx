@@ -1,7 +1,7 @@
 import site from '../config.json';
 import FadeIn from 'react-fade-in';
 
-export default function Help( { slug } ) {
+export default function Help() {
 	return <>
 		<FadeIn>
 			<p>
