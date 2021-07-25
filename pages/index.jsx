@@ -36,7 +36,7 @@ export default function Home() {
 			<link rel="icon" href={`${config.gravatar}?s=32`} />
 		</Head>
 
-		<FadeIn transitionDuration={400*4} delay={50*2}>
+		<FadeIn transitionDuration={400*4} delay={500}>
 			<div className="icons">
 				<ul>
 					<li><IconLink href="https://twitter.com/aubreypwd" icon={faTwitter} newWindow={true} title="Twitter" size={config.iconSize} /></li>
