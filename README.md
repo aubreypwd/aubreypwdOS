@@ -2,7 +2,7 @@
 
 This is a simple web-app build on Next.js that displays icons in a Dock-like format.
 
-ADD SCREENSHOT IN GH
+![image](https://user-images.githubusercontent.com/1753298/126888176-66542e5a-f5d9-4a3c-bd3a-a90f01104225.png)
 
 ## Where can I see it?
 
