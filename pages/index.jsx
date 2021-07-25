@@ -29,6 +29,7 @@ export default function Home() {
 				<li><IconLink href="https://github.com/aubreypwd" icon={faGithub} newWindow={true} title="Github" /></li>
 				<li><IconLink href="https://twitter.com/aubreypwd" icon={faTwitter} newWindow={true} title="Twitter" /></li>
 				<li><IconLink href="https://linkedin.com/in/aubreypwd" icon={faLinkedin} newWindow={true} title="LinkedIn" /></li>
+				<li><IconLink href="https://linkedin.com/in/aubreypwd" icon={faLinkedin} newWindow={true} title="LinkedIn" /></li>
 			</ul>
 		</div>
 	</>
