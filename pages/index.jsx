@@ -22,7 +22,7 @@ const config = {
 
 	title: "Aubrey Portwood",
 	author: "Aubrey Portwood",
-	description: "I mostly build websites, but am also a Stoic",
+	description: "I mostly build websites",
 	gravatar: "https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/",
 	initialIconSize: 96 * 4
 }
