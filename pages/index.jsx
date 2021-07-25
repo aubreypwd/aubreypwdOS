@@ -28,8 +28,8 @@ const config = {
 	initialIconSize: 96 * 4
 }
 
-console.log( `%cThanks for visiting ${config.title} a simple site that links to further things about me, ${config.author}`, 'color: #ff00ff' );
-console.log( '%cBuilt with Next.js - https://github.com/aubreypwd/aubreypwdOS', 'color: #06e6f2' );
+console.log( `%c\\( ﾟヮﾟ)/ Thanks for visiting ${config.title} a simple site that links to further things about me, ${config.author}`, 'color: #ff00ff' );
+console.log( '%cBuilt with <3 and Next.js - https://github.com/aubreypwd/aubreypwdOS', 'color: #06e6f2' );
 
 export default function Index() {
 	return <>
@@ -47,7 +47,7 @@ export default function Index() {
 					<li><IconLink href="https://github.com/aubreypwd" icon={faGithub} newWindow={true} title="Github" size={config.initialIconSize} description="I code and type things in my terminal, it's all mostly on Github."/></li>
 					<li><IconLink href="https://linkedin.com/in/aubreypwd" icon={faLinkedin} newWindow={true} title="LinkedIn" size={config.initialIconSize} description="You're going to learn more about my past and my skills here, I rarely post here." /></li>
 					<li><IconLink href="https://profiles.wordpress.org/aubreypwd/" icon={faWordpress} newWindow={true} title="WordPress.org" size={config.initialIconSize} description="I've been build WordPress websites for over 10 years and try my best to stay involved in the WordPress community."/></li>
-					<li><IconLink href="https://tlk.io/aubreypwd" icon={faComments} newWindow={true} title="Chat" size={config.initialIconSize} description="If I'm at my computer, feel free to chat with me directly."/></li>
+					<li><IconLink href="https://tlk.io/aubreypwd" icon={faComments} newWindow={true} title="Chat" size={config.initialIconSize} description="If I'm at my computer, feel free to chat with me directly, but remember it's public."/></li>
 				</ul>
 			</div>
 		</FadeIn>
