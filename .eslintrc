@@ -3,5 +3,6 @@
     "next", "next/core-web-vitals"
   ],
   "rules": {
+    "no-html-link-for-pages": true
   }
 }
