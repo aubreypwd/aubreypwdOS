@@ -12,326 +12,66 @@
 	padding: 0;
 	scroll-behavior: smooth;
 
-	section.page {
+	#__next {
 
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		display: flex;
 		align-items: center;
-		justify-content: center;
-		margin: auto;
-		padding: 0 2rem;
-		width: 800px;
 
 		a {
 
 			color: $fg;
 			text-decoration: none;
 			transition: color 0.5s;
-		}
+			transition: border 0.5s;
 
-		header {
-
-			@media ( max-width: $mobile ) {
-				margin-top: 20px;
-			}
-
-			margin-top: 4rem;
-
-			h2 {
-				font-size: 1rem;
-			}
-
-			nav {
-
-				&.icons {
-
-					ul {
-
-						display: inline-block;
-						margin: 0;
-						padding: 1rem 0;
-
-						li {
-
-							display: inline-block;
-							padding: 0 5px;
-
-							&:first-child {
-								padding-left: 0;
-							}
-						}
-					}
-				}
-
-				&.lead {
-
-					h2 {
-
-						font-size: 4rem;
-						margin: 0;
-					}
-
-					div.by {
-
-						color: $mid;
-						font-size: 1rem;
-						font-weight: normal;
-						line-height: 2rem;
-						margin: 0;
-					}
-
-					// Navigator.
-					input.navigator,
-					input.navigator:active,
-					input.navigator:focus,
-					input.navigator:focus-within {
-
-						background-color: $bg;
-						border-bottom: 1px solid $mid;
-						border-left: 0;
-						border-radius: 0;
-						border-right: 0;
-						border-top: 0;
-						caret-color: $mid;
-						color: $active;
-						display: block;
-						font-family: inherit;
-						font-size: inherit;
-						font-weight: bold;
-						margin: 0;
-						outline: none;
-						padding: 0;
-						text-transform: lowercase;
-						transition: color 1s;
-						width: 100%;
-
-						&::selection{
-
-							background: $mid;
-							color: $fg;
-						}
-
-						&.invalid {
-							color: $error;
-						}
-					}
-				}
+			&:hover,
+			&:focus {
+				border-bottom: 1px solid $fg;
 			}
 		}
 
-		main {
+		h1 {
+			display: block;
+		}
 
-			align-items: center;
-			justify-content: center;
-			padding: 2rem 0;
+		.icons {
+			margin: auto;
 
-			a {
+			ul {
 
-				border-bottom: 1px solid $mid;
-				transition: border 0.5s;
-
-				&:hover,
-				&:focus {
-					border-bottom: 1px solid $fg;
-				}
-			}
-
-			ul.posts {
-
-				list-style: none;
-				margin-top: 0;
-				padding-left: 0;
-				padding-right: 0;
+				display: inline-block;
+				margin: 0;
+				padding: 1rem 0;
 
 				li {
 
-					border-bottom: 1px solid $mid;
-					margin: 0;
-					padding: 0;
+					display: inline-block;
+					padding: 40px;
 
-					&:last-child {
-						border-bottom-color: transparent;
-					}
+					&:hover {
 
-					a.postlink {
-
-						border-bottom: 1px solid transparent;
-						color: $fg;
-						display: flex;
-						flex-direction: row;
-						flex-wrap: wrap;
-
-						&[href="its-time-to-love-coding-again"],
-						&[href="its-time-to-love-coding-again"]:hover {
-							color: #ff00ff;
-						}
-
-						&:hover,
-						&:focus {
+						div.title {
 							color: $fg;
-
-							small {
-								color: $fg;
-								transition: color 2s;
-							}
+							transition: color 1s;
 						}
 
-						strong,
-						small {
-
-							display: flex;
-							flex-basis: 100%;
-							flex-direction: column;
-							flex: 1;
-							margin: 0;
-							padding: 10px 0;
-						}
-
-						small {
-
-							align-self: center;
-							color: $mid;
-							display: inline-block;
-							font-style: italic;
-							justify-content: space-between;
-							text-align: right;
+						a {
+							color: $fg;
+							transition: color 0.5s;
 						}
 					}
-				}
-			}
-
-			article.post {
-
-				&.its-time-to-love-coding-again {
-					header {
-						h1 {
-							color: #ff00ff;
-						}
-					}
-				}
-
-				hr {
-					border: 1px solid $mid;
-					opacity: 75%;
-				}
-
-				header {
-
-					margin-bottom: 30px;
-					margin-top: 0;
-
-					h1,
-					span {
-						display: block;
-					}
-
-					h1 {
-
-						font-size: 2rem;
-						margin-top: 0;
-
-						&:first-child {
-							margin-bottom: 5px;
-						}
-					}
-
-					span {
-
-						color: $mid;
-						font-style: italic;
-						margin-top: 10px;
-						padding-left: 0;
-					}
-				}
-
-				img {
-					max-width: 100%;
-				}
-
-				p,
-				ul,
-				blockquote, {
-					line-height: 1.5rem;
-				}
-
-				code,
-				pre {
-
-					&, span {
-						font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
-					}
-				}
-
-				pre {
-					border-radius: 5px;
-				}
-
-				code {
-
-					color: $fg;
-					font-weight: bold;
-				}
-
-				a {
-					&.id-link {
-
-						border: none;
-						float:right;
-						margin-right: 10px;
-
-						&.id-link:hover,
-						&.id-link:focus {
-							svg {
-								fill: $fg;
-							}
-						}
-
-						svg {
-							fill: $mid;
-							transition: fill 0.5s;
-						}
-					}
-				}
-			}
-		}
-
-		footer {
-
-			border-top: 1px solid $mid;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			height: 100px;
-			justify-content: center;
-			width: 100%;
-
-			a {
-				align-items: center;
-				justify-content: center;
-			}
-
-			p {
-				color: $mid;
-				display: flex;
-				flex-basis: 100%;
-				flex-direction: column;
-				flex: 1;
-
-				&:first-child {
-				}
-
-				&:last-child {
-					text-align: right;
-					font-weight: bold;
 
 					a {
-						border-bottom: 1px dotted $mid;
 						color: $mid;
-						transition: border 0.5s;
-						transition: color 0.5s;
+					}
 
-						&:hover,
-						&:focus {
-							color: $fg;
-						}
+					div.title {
+						color: $mid;
+						padding: 5px 0;
 					}
 				}
 			}
@@ -341,6 +81,7 @@
 			width: 100%;
 		}
 	}
+
 }
 
 html {
