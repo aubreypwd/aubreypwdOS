@@ -94,10 +94,6 @@
 					&:hover {
 						transform: scale(1.5);
 
-						@media only screen and ( max-width: $mobile ) {
-							transform: none;
-						}
-
 						a {
 							color: $fg;
 							transition: color 0.5s;
