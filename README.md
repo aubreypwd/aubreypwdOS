@@ -6,7 +6,7 @@ ADD SCREENSHOT IN GH
 
 ## Where can I see it?
 
-You can see it at [aubreypwd.com](https://aubreypwd.com)
+You can see it at [aubreypwd.com](https://aubreypwd.com) or [https://aubreypwd-links.vercel.app/](https://aubreypwd-links.vercel.app/).
 
 ## How to dev
 
