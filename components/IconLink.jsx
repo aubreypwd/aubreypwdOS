@@ -9,8 +9,6 @@ export default function IconLink( {
 	description = '',
 } ) {
 
-	console.log( `${href}: ${description}` );
-
 	return <>
 
 		<a href={href} rel="noreferrer" target={ newWindow ? '_blank' : '' }>
