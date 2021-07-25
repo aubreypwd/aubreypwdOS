@@ -24,7 +24,7 @@ const config = {
 	author: "Aubrey Portwood",
 	description: "I mostly build websites, but am also a Stoic",
 	gravatar: "https://www.gravatar.com/avatar/09601923fd59a7433892711376c37e41/",
-	iconSize: 96
+	initialIconSize: 96 * 4
 }
 
 export default function Home() {
@@ -39,11 +39,11 @@ export default function Home() {
 		<FadeIn transitionDuration={400*4} delay={500}>
 			<div className="icons">
 				<ul>
-					<li><IconLink href="https://twitter.com/aubreypwd" icon={faTwitter} newWindow={true} title="Twitter" size={config.iconSize} /></li>
-					<li><IconLink href="https://github.com/aubreypwd" icon={faGithub} newWindow={true} title="Github" size={config.iconSize} /></li>
-					<li><IconLink href="https://linkedin.com/in/aubreypwd" icon={faLinkedin} newWindow={true} title="LinkedIn" size={config.iconSize} /></li>
-					<li><IconLink href="https://profiles.wordpress.org/aubreypwd/" icon={faWordpress} newWindow={true} title="WordPress.org" size={config.iconSize} /></li>
-					<li><IconLink href="mailto:contact@aubreypwd.com" icon={faInbox} newWindow={false} title="Email" size={config.iconSize} /></li>
+					<li><IconLink href="https://twitter.com/aubreypwd" icon={faTwitter} newWindow={true} title="Twitter" size={config.initialIconSize} /></li>
+					<li><IconLink href="https://github.com/aubreypwd" icon={faGithub} newWindow={true} title="Github" size={config.initialIconSize} /></li>
+					<li><IconLink href="https://linkedin.com/in/aubreypwd" icon={faLinkedin} newWindow={true} title="LinkedIn" size={config.initialIconSize} /></li>
+					<li><IconLink href="https://profiles.wordpress.org/aubreypwd/" icon={faWordpress} newWindow={true} title="WordPress.org" size={config.initialIconSize} /></li>
+					<li><IconLink href="mailto:contact@aubreypwd.com" icon={faInbox} newWindow={false} title="Email" size={config.initialIconSize} /></li>
 				</ul>
 			</div>
 		</FadeIn>

@@ -4,7 +4,7 @@ export default function IconLink( { href, icon, newWindow = false, title = '', s
 
 	return <>
 		<a href={href} rel="noreferrer" target={ newWindow ? '_blank' : '' }>
-			<div><FontAwesomeIcon icon={icon} height={size} width={size} /></div>
+			<div className="icon"><FontAwesomeIcon icon={icon} height={size} width={size} /></div>
 			<div className="title">{title}</div>
 		</a>
 	</>;
