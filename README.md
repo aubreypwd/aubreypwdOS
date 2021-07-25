@@ -6,7 +6,7 @@ This is a simple web-app build on Next.js that displays icons in a Dock-like for
 
 ## Where can I see it?
 
-You can see it at [aubreypwd.com](https://aubreypwd.com) or [https://aubreypwd-links.vercel.app/](https://aubreypwd-links.vercel.app/).
+You can see it at [aubreypwd.com](https://aubreypwd.com) or [aubreypwd-links.vercel.app](https://aubreypwd-links.vercel.app/).
 
 ## How to dev
 
