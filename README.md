@@ -1,6 +1,6 @@
-# links
+# aubreypwdOS
 
-This is a simple web-app build on Next.js that displays icons in a Dock-like format.
+This is a simple web-app build on Next.js that displays icons in a Dock-like format that links to stuff that matters about me.
 
 ![image](https://user-images.githubusercontent.com/1753298/126888176-66542e5a-f5d9-4a3c-bd3a-a90f01104225.png)
 
