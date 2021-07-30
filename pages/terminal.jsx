@@ -42,10 +42,6 @@ export default function Index() {
 
 				<Terminal
 
-					style={{
-						backgroundColor: 'black',
-					}}
-
 					commands={{
 
 						exit: {

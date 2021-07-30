@@ -34,9 +34,10 @@
 				height: 100%;
 				position: fixed;
 				width: 100%;
+				padding: 0;
+
 				background-color: $bg !important;
 				color: $fg !important;
-				padding: 0;
 
 				& div {
 					color: $fg !important;
@@ -169,10 +170,10 @@ html {
 	}
 
 	body {
-		@include body( black, white, #00000073 );
+		@include body( #151515, white, #00000073 );
 
 		@media ( prefers-color-scheme: dark ) {
-			@include body( white, black, #ffffff5c );
+			@include body( white, #151515, #ffffff5c );
 		}
 	}
 }
