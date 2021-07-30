@@ -1,6 +1,7 @@
 import Terminal from 'react-console-emulator';
 import { useState } from 'react';
 import config from '../config.js';
+import Header from '../components/Header.jsx';
 
 export default function Index() {
 
@@ -14,8 +15,22 @@ export default function Index() {
 
 		'/': [
 			'links',
+			'mcfarlin',
+			'papyrus',
 		],
 
+		// Because why would I not?
+		'mcfarlin': {
+			'mustard-calls':       () => window.open( 'https://www.youtube.com/watch?v=QWDpk7ZI6HA', '_blank' ),
+			'tom-is-an-introvert': () => window.open( 'https://www.youtube.com/watch?v=KULbfJK0Lnw', '_blank' ),
+			'Wordpress':           () => window.open( 'https://www.youtube.com/watch?v=3ytA-GrqQVY', '_blank' ),
+		},
+
+		'papyrus': {
+			'papyrus.ttf': () => document.getElementsByClassName( 'terminal' )[0].classList.add( 'papyrus' ),
+		},
+
+		// The same things on the homepage.
 		'links': [
 			'..',
 			...getIcons(),
@@ -23,85 +38,113 @@ export default function Index() {
 
 	} );
 
-	console.log( files.links );
+	return <>
+		<Header subTitle='Terminal' />
+		<div className="terminal">
 
-	return <div className="terminal">
-		<Terminal
+				<Terminal
 
-			commands={{
+					commands={{
 
-				open: {
-					description: 'Open a file.',
-					usage: 'open [file]',
+						// Open command.
+						open: {
+							description: 'Open a file.',
+							usage: 'open [file]',
 
-					fn: ( arg1 ) => {
-						if ( 'links' === currentDir && files.links.includes( arg1 ) ) {
-							config.icons.map( icon => {
-								if ( icon.fileName !== arg1 ) {
-									return;
+							fn: ( arg1 ) => {
+
+								// links
+								if ( 'links' === currentDir && files.links.includes( arg1 ) ) {
+									config.icons.map( icon => {
+
+										if ( icon.fileName !== arg1 ) {
+											return;
+										}
+
+										window.open( icon.href, '_blank' );
+									} );
+
+									return false;
 								}
 
-								window.open( icon.href, '_blank' );
-							} );
+								if ( ! files[currentDir][arg1] ) {
 
-							return false;
-						}
+									return `No file named ${arg1} in ${currentDir}/.`;
+								}
 
-						if ( ! files[currentDir][arg1] ) {
-							return `No file named ${arg1} in ${currentDir}/.`;
-						}
+								const call = files[currentDir][arg1]();
 
-						files[currentDir][arg1]();
+								if ( 'string' === typeof call ) {
+									return call;
+								}
 
-						return false;
-					}
-				},
+								return false;
+							}
+						},
 
-				cd: {
-					description: 'Open a folder.',
-					usage: 'cd [folder]',
+						// cd command.
+						cd: {
+							description: 'Open a folder.',
+							usage: 'cd [folder]',
 
-					fn: ( arg1 ) => {
+							fn: ( arg1 ) => {
 
-						if ( '..' === arg1 ) {
-							setCurrentDir( '/' );
-							return false;
-						}
+								if ( '..' === arg1 ) {
+									setCurrentDir( '/' );
+									return false;
+								}
 
-						if ( ! files[ arg1 ] ) {
-							return `No folder called ${arg1}`;
-						}
+								if ( ! files[ arg1 ] ) {
+									return `No folder called ${arg1}`;
+								}
 
-						return setCurrentDir( arg1 );
-					}
-				},
+								return setCurrentDir( arg1 );
+							}
+						},
 
-				ls: {
-						description: 'List files.',
-						usage: 'ls',
+						// ls command.
+						ls: {
+								description: 'List files.',
+								usage: 'ls',
 
-						fn: () => {
+								fn: () => {
 
-							return [
-								'total ' + Object.keys( files[ currentDir ] ).length,
+									return [
+										'total ' + Object.keys( files[ currentDir ] ).length,
 
-								...Object.entries( files[ currentDir ] ).map( ( i, v ) => {
+										...Object.entries( files[ currentDir ] ).map( ( i, v ) => {
 
-									if ( '/' !== currentDir ) {
-										return `${i[1]}`;
-									}
+											if ( '/' !== currentDir ) {
 
-									return `${i[1]}/`;
-								} ),
+												// Maybe a function or maybe a string only.
+												if ( 'object' === typeof i ) {
 
-							].join( '\n' );
-						}
-					}
-			}}
+													// String only.
+													if ( 'string' === typeof i[1] ) {
+														return i[1];
+													}
 
-			welcomeMessage="Welcome to aubreypwdOS!"
-			promptLabel={`aubreypwdOS@${currentDir}/`.replace( '//', '/')}
-			autoFocus={true}
-		/>
-	</div>
+													// Must have  a function.
+													return i[0];
+												}
+
+												// Everything else.
+												return `${i[1]}`;
+											}
+
+											// Directory.
+											return `${i[1]}/`;
+										} ),
+
+									].join( '\n' );
+								}
+							}
+					}}
+
+					welcomeMessage="Welcome to aubreypwdOS!"
+					promptLabel={`aubreypwdOS@${currentDir}/`.replace( '//', '/')}
+					autoFocus={true}
+				/>
+			</div>
+	</>
 }

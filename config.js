@@ -11,8 +11,9 @@ import {
   faHome,
   faInbox,
   faComments,
+  faTerminal,
 
-// https://fontawesome.com/v5.15/icons?d=gallery&p=1&q=skull&s=solid&m=free
+// https://fontawesome.com/v5.15/icons?d=gallery&p=1&q=&s=solid&m=free
 } from '@fortawesome/free-solid-svg-icons';
 
 module.exports = {
@@ -25,37 +26,44 @@ module.exports = {
     {
       href: "https://twitter.com/aubreypwd",
       icon: faTwitter,
-      newWindow:true,
+      newWindow: true,
       title:"Twitter",
-      fileName: "twitter.url"
+      fileName: "twitter" // For Terminal
     },
     {
       href: "https://github.com/aubreypwd",
       icon: faGithub,
-      newWindow:true,
+      newWindow: true,
       title:"Github",
-      fileName: 'github.url'
+      fileName: 'github' // For Terminal
     },
     {
       href: "https://linkedin.com/in/aubreypwd",
       icon: faLinkedin,
-      newWindow:true,
+      newWindow: true,
       title:"LinkedIn",
-      fileName: 'linkedin.url'
+      fileName: 'linkedin' // For Terminal
     },
     {
       href: "https://profiles.wordpress.org/aubreypwd/",
       icon: faWordpress,
-      newWindow:true,
+      newWindow: true,
       title:"WordPress.org",
-      fileName: 'wordpress.url'
+      fileName: 'wordpress' // For Terminal
     },
     {
       href: "https://tlk.io/aubreypwd",
       icon: faComments,
-      newWindow:true,
+      newWindow: true,
       title:"Chat",
-      fileName: 'chat.url'
+      fileName: 'chat' // For Terminal
     },
+    {
+      href: "/terminal",
+      icon: faTerminal,
+      newWindow: true,
+      title:"Terminal",
+      fileName: 'terminal' // For Terminal
+    }
   ]
 };

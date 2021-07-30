@@ -1,3 +1,9 @@
+@font-face {
+	font-family: Comic Mono;
+	font-weight: normal;
+	src: url("/ComicMono.ttf");
+}
+
 @mixin body( $fg, $bg, $mid ) {
 
 	$active: $fg;
@@ -25,6 +31,14 @@
 				height: 100%;
 				position: fixed;
 				width: 100%;
+			}
+
+			&.papyrus {
+				& div[name="react-console-emulator"] {
+					& div[name="react-console-emulator__content"] {
+						font-family: "Comic Mono", "Comic Sans MS", "Comic Sans", cursive !important;
+					}
+				}
 			}
 		}
 
