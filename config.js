@@ -28,42 +28,42 @@ module.exports = {
       icon: faTwitter,
       newWindow: true,
       title:"Twitter",
-      fileName: "twitter" // For Terminal
+      fileName: "Twitter" // For Terminal
     },
     {
       href: "https://github.com/aubreypwd",
       icon: faGithub,
       newWindow: true,
       title:"Github",
-      fileName: 'github' // For Terminal
+      fileName: 'Github' // For Terminal
     },
     {
       href: "https://linkedin.com/in/aubreypwd",
       icon: faLinkedin,
       newWindow: true,
       title:"LinkedIn",
-      fileName: 'linkedin' // For Terminal
+      fileName: 'LinkedIn' // For Terminal
     },
     {
       href: "https://profiles.wordpress.org/aubreypwd/",
       icon: faWordpress,
       newWindow: true,
       title:"WordPress.org",
-      fileName: 'wordpress' // For Terminal
+      fileName: 'WordPress' // For Terminal
     },
     {
       href: "https://tlk.io/aubreypwd",
       icon: faComments,
       newWindow: true,
       title:"Chat",
-      fileName: 'chat' // For Terminal
+      fileName: 'Chat' // For Terminal
     },
     {
       href: "/terminal",
       icon: faTerminal,
       newWindow: true,
       title:"Terminal",
-      fileName: 'terminal' // For Terminal
+      fileName: 'Terminal.app' // For Terminal
     }
   ]
 };
