@@ -107,6 +107,12 @@
 								display: inline;
 								margin: auto;
 
+								&[href="/terminal"] {
+									@media only screen and ( max-width: $mobile ) {
+										display: none;
+									}
+								}
+
 								.icon {
 									height: 96px;
 									width: 96px;
