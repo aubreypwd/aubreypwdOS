@@ -4,16 +4,11 @@ import config from '../config.js';
 import Header from '../components/Header.jsx';
 
 export default function Index() {
-
-	function getIcons() {
-		return config.icons.map( icon => icon.fileName );
-	}
-
-	const [ currentDir, setCurrentDir ] = useState( '/' );
+	const [ currentDir, setCurrentDir ] = useState( '~' );
 
 	const [ files, setFiles ] = useState( {
 
-		'/': [
+		'~': [
 			'links',
 			'mcfarlin',
 			'papyrus',
@@ -27,24 +22,37 @@ export default function Index() {
 		},
 
 		'papyrus': {
-			'papyrus.ttf': () => document.getElementsByClassName( 'terminal' )[0].classList.add( 'papyrus' ),
+			'papyrus.ttf':          () => document.getElementsByClassName( 'terminal' )[0].classList.add( 'papyrus' ),
+			'imadeamistake.ttf': () => document.getElementsByClassName( 'terminal' )[0].classList.remove( 'papyrus' ),
 		},
 
 		// The same things on the homepage.
 		'links': [
 			'..',
-			...getIcons(),
+			...config.icons.map( icon => icon.fileName ),
 		],
 
 	} );
 
 	return <>
+
 		<Header subTitle='Terminal' />
+
 		<div className="terminal">
 
 				<Terminal
 
+					style={{
+						backgroundColor: 'black',
+					}}
+
 					commands={{
+
+						exit: {
+							description: 'Exit this terminal',
+							usage: 'exit',
+							fn: () => window.close(),
+						},
 
 						// Open command.
 						open: {
@@ -90,7 +98,7 @@ export default function Index() {
 							fn: ( arg1 ) => {
 
 								if ( '..' === arg1 ) {
-									setCurrentDir( '/' );
+									setCurrentDir( '~' );
 									return false;
 								}
 
@@ -114,7 +122,7 @@ export default function Index() {
 
 										...Object.entries( files[ currentDir ] ).map( ( i, v ) => {
 
-											if ( '/' !== currentDir ) {
+											if ( '~' !== currentDir ) {
 
 												// Maybe a function or maybe a string only.
 												if ( 'object' === typeof i ) {
@@ -141,8 +149,10 @@ export default function Index() {
 							}
 					}}
 
-					welcomeMessage="Welcome to aubreypwdOS!"
-					promptLabel={`aubreypwdOS@${currentDir}/`.replace( '//', '/')}
+					promptLabelStyle={{ color: '#59cfe1' }}
+					inputTextStyle={{ color: '#78d18b' }}
+					welcomeMessage="Welcome to aubreypwdOS"
+					promptLabel={<strong>{`aubreypwdOS@${currentDir}/$`.replace( '~/', '~')}</strong>}
 					autoFocus={true}
 				/>
 			</div>

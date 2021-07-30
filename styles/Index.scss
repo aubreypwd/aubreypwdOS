@@ -25,12 +25,27 @@
 		position: fixed;
 
 		& > div.terminal {
+			height: 100%;
+			width: 100%;
+			padding: 0;
 
 
 			& div[name="react-console-emulator"] {
 				height: 100%;
 				position: fixed;
 				width: 100%;
+				background-color: $bg !important;
+				color: $fg !important;
+				padding: 0;
+
+				& div {
+					color: $fg !important;
+				}
+
+				& div[name="react-console-emulator__content"] {
+					height: 100%;
+				}
+
 			}
 
 			&.papyrus {

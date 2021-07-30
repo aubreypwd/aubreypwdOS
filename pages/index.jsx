@@ -6,6 +6,7 @@ import FadeIn from 'react-fade-in';
 export default function Index() {
 
 	return <>
+
 		<Header />
 
 		<FadeIn transitionDuration={400*4} delay={500}>
