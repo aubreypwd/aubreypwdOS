@@ -25,8 +25,8 @@ export default function Index() {
 		},
 
 		'papyrus': {
-			'papyrus.ttf':          () => document.getElementsByClassName( 'terminal' )[0].classList.add( 'papyrus' ),
-			'imadeamistake.ttf': () => document.getElementsByClassName( 'terminal' )[0].classList.remove( 'papyrus' ),
+			'papyrus.ttf':  () => document.getElementsByClassName( 'terminal' )[0].classList.add( 'papyrus' ),
+			'normal.ttf':   () => document.getElementsByClassName( 'terminal' )[0].classList.remove( 'papyrus' ),
 		},
 
 		// The same things on the homepage.
