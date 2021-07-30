@@ -1,11 +1,14 @@
-import Terminal from 'react-console-emulator';
-import { useState } from 'react';
 import config from '../config.js';
 import Header from '../components/Header.jsx';
+import Terminal from 'react-console-emulator';
+import { useState } from 'react';
 
 export default function Index() {
+
+	// Current directory.
 	const [ currentDir, setCurrentDir ] = useState( '~' );
 
+	// Files.
 	const [ files, setFiles ] = useState( {
 
 		'~': [
@@ -42,8 +45,10 @@ export default function Index() {
 
 				<Terminal
 
+					// The commands.
 					commands={{
 
+						// Normal exit command.
 						exit: {
 							description: 'Exit this terminal',
 							usage: 'exit',
@@ -59,6 +64,8 @@ export default function Index() {
 
 								// links
 								if ( 'links' === currentDir && files.links.includes( arg1 ) ) {
+
+									// Open links.
 									config.icons.map( icon => {
 
 										if ( icon.fileName !== arg1 ) {
@@ -73,16 +80,18 @@ export default function Index() {
 
 								if ( ! files[currentDir][arg1] ) {
 
+									// Nothing.
 									return `No file named ${arg1} in ${currentDir}/.`;
 								}
 
+								// Normal files (that are functions that do things).
 								const call = files[currentDir][arg1]();
 
 								if ( 'string' === typeof call ) {
-									return call;
+									return call; // Return output.
 								}
 
-								return false;
+								return false; // No output.
 							}
 						},
 
@@ -94,14 +103,16 @@ export default function Index() {
 							fn: ( arg1 ) => {
 
 								if ( '..' === arg1 ) {
-									setCurrentDir( '~' );
-									return false;
+
+									// Go home (yes my FS only supports 2 levels).
+									return setCurrentDir( '~' );
 								}
 
 								if ( ! files[ arg1 ] ) {
 									return `No folder called ${arg1}`;
 								}
 
+								// Go to 2nd level folder.
 								return setCurrentDir( arg1 );
 							}
 						},
@@ -114,8 +125,11 @@ export default function Index() {
 								fn: () => {
 
 									return [
+
+										// Always show total.
 										'total ' + Object.keys( files[ currentDir ] ).length,
 
+										// Then the list of files or folders.
 										...Object.entries( files[ currentDir ] ).map( ( i, v ) => {
 
 											if ( '~' !== currentDir ) {
@@ -145,9 +159,14 @@ export default function Index() {
 							}
 					}}
 
+					// Other options like styles, etc.
 					promptLabelStyle={{ color: '#59cfe1' }}
 					inputTextStyle={{ color: '#78d18b' }}
-					welcomeMessage="Welcome to aubreypwdOS"
+
+					welcomeMessage={[
+						"Welcome to aubreypwdOS, type [help] if you need help.",
+					]}
+
 					promptLabel={<strong>{`aubreypwdOS@${currentDir}/$`.replace( '~/', '~')}</strong>}
 					autoFocus={true}
 				/>

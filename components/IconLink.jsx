@@ -15,5 +15,6 @@ export default function IconLink( {
 			<div className="icon"><FontAwesomeIcon icon={icon} height={size} width={size} /></div>
 			<div className="title">{title}</div>
 		</a>
+
 	</>;
 };
