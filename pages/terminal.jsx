@@ -20,7 +20,6 @@ export default function Index() {
 		// Because why would I not?
 		'mcfarlin': {
 			'mustard-calls':       () => window.open( 'https://www.youtube.com/watch?v=QWDpk7ZI6HA', '_blank' ),
-			// 'tom-is-an-introvert': () => window.open( 'https://www.youtube.com/watch?v=KULbfJK0Lnw', '_blank' ),
 			'Wordpress':           () => window.open( 'https://www.youtube.com/watch?v=3ytA-GrqQVY', '_blank' ),
 		},
 

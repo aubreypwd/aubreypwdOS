@@ -12,6 +12,7 @@ import {
   faInbox,
   faComments,
   faTerminal,
+  faGifts,
 
 // https://fontawesome.com/v5.15/icons?d=gallery&p=1&q=&s=solid&m=free
 } from '@fortawesome/free-solid-svg-icons';
@@ -59,6 +60,13 @@ module.exports = {
       newWindow: true,
       title:"Chat",
       fileName: 'Chat' // For Terminal
+    },
+    {
+      href: "https://www.giftster.com/gift/public/Cs5vO/",
+      icon: faGifts,
+      newWindow: true,
+      title:"Wishlist",
+      fileName: 'Wishlist' // For Terminal
     },
     {
       href: "/terminal",
