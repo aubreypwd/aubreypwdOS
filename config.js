@@ -54,13 +54,13 @@ module.exports = {
       title:"WordPress.org",
       fileName: 'WordPress' // For Terminal
     },
-    // {
-    //   href: "https://tlk.io/aubreypwd",
-    //   icon: faComments,
-    //   newWindow: true,
-    //   title:"Chat",
-    //   fileName: 'Chat' // For Terminal
-    // },
+    {
+      href: "https://communityinviter.com/apps/aubreypwd/aubreypwd",
+      icon: faComments,
+      newWindow: true,
+      title:"Slack",
+      fileName: 'Slack' // For Terminal
+    },
     {
       href: "https://www.giftster.com/gift/public/Cs5vO/",
       icon: faGifts,
