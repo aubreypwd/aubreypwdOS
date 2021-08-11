@@ -3,6 +3,7 @@ import {
   faTwitter,
   faLinkedin,
   faWordpress,
+  faSlack,
 
 //https://fontawesome.com/v5.15/icons/stack-overflow?style=brands
 } from '@fortawesome/free-brands-svg-icons';
@@ -56,7 +57,7 @@ module.exports = {
     },
     {
       href: "https://communityinviter.com/apps/aubreypwd/aubreypwd",
-      icon: faComments,
+      icon: faSlack,
       newWindow: true,
       title:"Slack",
       fileName: 'Slack' // For Terminal
