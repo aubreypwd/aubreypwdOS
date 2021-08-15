@@ -32,28 +32,28 @@ module.exports = {
       icon: faTwitter,
       newWindow: true,
       title:"Twitter",
-      fileName: "Twitter" // For Terminal
+      fileName: "Twitter.url" // For Terminal
     },
     {
       href: "https://github.com/aubreypwd",
       icon: faGithub,
       newWindow: true,
       title:"Github",
-      fileName: 'Github' // For Terminal
+      fileName: 'Github.url' // For Terminal
     },
     {
       href: "https://linkedin.com/in/aubreypwd",
       icon: faLinkedin,
       newWindow: true,
       title:"LinkedIn",
-      fileName: 'LinkedIn' // For Terminal
+      fileName: 'LinkedIn.url' // For Terminal
     },
     {
       href: "https://profiles.wordpress.org/aubreypwd/",
       icon: faWordpress,
       newWindow: true,
       title:"WordPress.org",
-      fileName: 'WordPress' // For Terminal
+      fileName: 'WordPress.url' // For Terminal
     },
     // {
     //   href: "https://communityinviter.com/apps/aubreypwd/aubreypwd",
@@ -67,7 +67,7 @@ module.exports = {
       icon: faGifts,
       newWindow: true,
       title:"Wishlist",
-      fileName: 'Wishlist' // For Terminal
+      fileName: 'Wishlist.url' // For Terminal
     },
     {
       href: "/terminal",
