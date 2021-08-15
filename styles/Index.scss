@@ -9,8 +9,6 @@
 	$active: $fg;
 	$error: $mid;
 
-	$mobile: 1024px;
-
 	background-color: $bg;
 	color: $fg;
 	font-family: -apple-system, Ariel, Arial, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -60,8 +58,8 @@
 			}
 		}
 
+		// Anything but the terminal page.
 		& > div:not(.terminal) {
-
 			& > div {
 
 				height: 100%;
@@ -89,16 +87,35 @@
 						display: block;
 						margin: 0;
 						padding: 1rem;
+						width: 100%;
+						max-width: 100%;
+						min-width: 100%;
+
+						@media only screen and ( max-width: 800px ) {
+							display: block;
+						}
 
 						li {
+
+							flex: 1;
 
 							display: inline-block;
 							padding: 40px;
 							transition: transform 0.3s;
 							text-align: center;
 
-							@media only screen and ( max-width: $mobile ) {
-								padding: 25px;
+							@media only screen and ( max-width: 700px ) {
+								padding: 25px 0;
+								min-width: 50%;
+								flex: 0;
+							}
+
+							@media only screen and ( max-width: 500px ) {
+								min-width: 33%;
+							}
+
+							@media only screen and ( max-width: 250px ) {
+								min-width: 100%;
 							}
 
 							a {
@@ -107,19 +124,13 @@
 								display: inline;
 								margin: auto;
 
-								&[href="/terminal"] {
-									@media only screen and ( max-width: $mobile ) {
-										display: none;
-									}
-								}
-
 								.icon {
 									height: 96px;
 									width: 96px;
 
 									margin: auto;
 
-									@media only screen and ( max-width: $mobile ) {
+									@media only screen and ( max-width: 800px ) {
 										height: 68px;
 										width: 68px;
 									}
@@ -136,15 +147,8 @@
 							}
 
 							div.title {
-
 								color: $mid;
 								padding: 5px 0;
-								opacity: 0;
-								transition: opacity 2s;
-
-								@media only screen and ( max-width: $mobile ) {
-									opacity: 1;
-								}
 							}
 
 							&:hover {
