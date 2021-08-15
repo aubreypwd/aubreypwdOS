@@ -79,9 +79,9 @@
 				}
 
 				.icons {
-
 					margin: auto;
 
+					// Icons:
 					ul {
 
 						display: block;
@@ -90,31 +90,36 @@
 						width: 100%;
 						max-width: 100%;
 						min-width: 100%;
+						flex: 1;
 
 						@media only screen and ( max-width: 800px ) {
 							display: block;
+							flex: 0;
 						}
 
+						// Icon:
 						li {
-
-							flex: 1;
-
 							display: inline-block;
 							padding: 40px;
 							transition: transform 0.3s;
 							text-align: center;
 
+							@media only screen and ( max-width: 1024px ) {
+								&[class="/terminal"] {
+									display: none; // You likely are on mobile, which won't work perfectly.
+								}
+							}
+
 							@media only screen and ( max-width: 700px ) {
-								padding: 25px 0;
+								padding: 25px 10px;
 								min-width: 50%;
-								flex: 0;
 							}
 
 							@media only screen and ( max-width: 500px ) {
 								min-width: 33%;
 							}
 
-							@media only screen and ( max-width: 250px ) {
+							@media only screen and ( max-width: 400px ) {
 								min-width: 100%;
 							}
 

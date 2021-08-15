@@ -13,7 +13,7 @@ export default function Index() {
 			<div className="icons">
 				<ul>
 					{config.icons.map( icon => {
-						return <li key={icon.href}>
+						return <li key={icon.href} class={icon.href}>
 							<IconLink
 								href={icon.href}
 								icon={icon.icon}
